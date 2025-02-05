@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <!-- META -->
@@ -148,9 +149,6 @@
         /* background-image: url("https://ethicstem.kr/files/attach/images/109/20bdbeb57e9c520cddfeb781c73fc413.jpg"); */
         background-color: #302f2f;
       }
-      .bh .section2 {
-        padding: 100px 0 186px 0;
-      }
 
       .bh .section3 {
         padding: 0 0 0 0;
@@ -171,9 +169,6 @@
       @media (max-width: 992px) {
         .bh .section1 {
           padding: 50px 0;
-        }
-        .bh .section2 {
-          padding: 50px 0 200px 0;
         }
         .bh .section4 {
           padding: 50px 0;
@@ -216,7 +211,7 @@
       }
       .selected-lang img {
         /* width: 16px;
-        height: 16px; */
+            height: 16px; */
       }
       .dropdown,
       .m-dropdown {
@@ -259,21 +254,41 @@
   </head>
 
   <!-- BODY START -->
-  <body class="color_scheme_light" cz-shortcut-listen="true">
-    <!-- PAGE CONTENT -->
-    <div>
-      <div class="skip"><a href="#content">메뉴 건너뛰기</a></div>
-      <div class="bh index">
-        <header class="header_wrap">
-          <div class="header bh_wrap clearfix">
-            <div class="bh_row ai-c">
-              <h1 class="logo col">
-                <a href="https://ethicstem.kr/" style="color: #fff">
-                  COMPANY LOGO</a
-                >
-              </h1>
+  <body class="color_scheme_light">
+    <!-- COMMON JS VARIABLES -->
+    <script>
+      var default_url = "https://ethicstem.kr/";
+      var current_url = "https://ethicstem.kr/";
+      var request_uri = "https://ethicstem.kr/";
+      var current_lang = (xe.current_lang = "ko");
+      var current_mid = "index";
+      var http_port = null;
+      var https_port = null;
+      var enforce_ssl = true;
+      var cookies_ssl = false;
+      var rewrite_level = 1;
+      if (detectColorScheme) detectColorScheme();
+    </script>
 
-              <div class="language-selector">
+    <!-- PAGE CONTENT -->
+
+    <div class="skip"><a href="#content">메뉴 건너뛰기</a></div>
+    <div class="bh index">
+      <header class="header_wrap">
+        <div class="header bh_wrap clearfix">
+          <div class="bh_row ai-c">
+            <h1 class="logo col">
+              <a href="/" style="color: #fff">
+                LOGO
+                <!-- <img
+                  src="https://ethicstem.kr/files/attach/images/109/ff49987370efe721365e206172837023.png"
+                  alt=""
+                  class="logo_img dark:ds-n"
+                /> -->
+              </a>
+            </h1>
+
+            <div class="language-selector">
                 <div class="selected-lang" onclick="toggleDropdown()">
                   <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
                   <span id="selected-text">ko</span>
@@ -296,542 +311,593 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
-        </header>
-        <header class="bh mobile_header_wrap">
-          <div
-            class="bh mobile_header_top bh_bg_color_white"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-            "
-          >
-            <div
-              class="bh"
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                font-size: 16px;
-                margin: 0 20px;
-              "
-            >
-              <a href="/"> LOGO </a>
-            </div>
-
-            <div class="language-selector">
-              <div class="selected-lang" onclick="toggleDropdown(true)">
-                <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
-                <span id="selected-text">ko</span>
-                <i class="ri-arrow-down-s-line"></i>
-              </div>
-              <div class="m-dropdown" id="m-dropdown">
-                <div
-                  class="en"
-                  onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png',true)"
-                >
-                  <img src="https://flagcdn.com/w40/us.png" alt="US Flag" />
-                  en
-                </div>
-                <div
-                  class="cn"
-                  onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png',true)"
-                >
-                  <img src="https://flagcdn.com/w40/cn.png" alt="CN Flag" />
-                  cn
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="dimmed"></div>
-        </header>
-
-        <div class="bh bh_layer_m_menu bh_layer bh_layer_left">
-          <div class="bh bh_layer_content">
-            <div class="bh bh_layer_header bh_bd_color_t">
-              <span class="bh_title"></span>
-              <div class="bh bh_layer_close">
-                <span><i class="xi-close"></i></span>
-              </div>
-            </div>
-          </div>
-          <div class="bh bh_layer_dimmed"></div>
         </div>
-        <div class="body">
-          <div>
-            <div id="index" class="slider_wrap clearfix">
-              <div
-                class="swiper-main swiper-default swiper-initialized swiper-horizontal swiper-backface-hidden"
-              >
-                <div class="scroll_wrap">
-                  <div class="ds-f jc-e">
-                    <div class="ta-c">
-                      <p class="fs-14 mb-5 bh_color_white">Scroll Down</p>
-                      <div class="line"></div>
-                    </div>
+      </header>
+      <header class="bh mobile_header_wrap">
+        <div class="bh mobile_header_top bh_bg_color_white">
+          <div class="bh mobile_logo">
+            <a href="/">
+             LOGO
+          </div>
+
+          
+        </div>
+      </header>
+
+      <div class="bh bh_layer_m_menu bh_layer bh_layer_left">
+        <div class="bh bh_layer_content">
+          <div class="bh bh_layer_header bh_bd_color_t">
+            <span class="bh_title"></span>
+            <div class="bh bh_layer_close">
+              <span><i class="xi-close"></i></span>
+            </div>
+          </div>
+          <div class="bh bh_layer_body pd-0">
+            <nav class="bh mobile_main_menu">
+              <ul>
+                <li>
+                  <a class="bh" href="/overview"> ABOUT</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/overview">- Overview</a>
+                    </li>
+                    <li>
+                      <a href="/mission">- Mission</a>
+                    </li>
+                    <li>
+                      <a href="/leadership">- Leadership</a>
+                    </li>
+                    <li>
+                      <a href="/mi">- Member Introduction</a>
+                    </li>
+                    <li>
+                      <a href="/patent">- Patent</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/technology"> TECHNOLOGY</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/technology">- Our Technology</a>
+                    </li>
+                    <li>
+                      <a href="/pipeline">- Pipeline</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/ace1"> PORTFOLIO</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/ace1">- ACE1</a>
+                    </li>
+                    <li>
+                      <a href="/ace2">- ACE2</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/news"> NEWSROOM</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/news">- News</a>
+                    </li>
+                    <li>
+                      <a href="/event">- Event</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/contact"> CONTACT</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="bh bh_layer_dimmed"></div>
+      </div>
+      <div class="body">
+        <div>
+          <div id="index" class="slider_wrap clearfix">
+            <div class="swiper-main swiper-default">
+              <div class="scroll_wrap">
+                <div class="ds-f jc-e">
+                  <div class="ta-c">
+                    <p class="fs-14 mb-5 bh_color_white">Scroll Down</p>
+                    <div class="line"></div>
                   </div>
                 </div>
+              </div>
+              <div class="swiper-wrapper">
                 <div
-                  class="swiper-wrapper"
-                  id="swiper-wrapper-fa9cc7746ba3138e"
-                  aria-live="off"
+                  class="swiper-slide item item1"
                   style="
-                    transition-duration: 0ms;
-                    transform: translate3d(-5108px, 0px, 0px);
-                    transition-delay: 0ms;
+                    background-image: url('https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/290/2024/07/08031329/IMG_9599.jpg');
                   "
                 >
-                  <div
-                    class="swiper-slide item item2 swiper-slide-next"
-                    style="
-                      background-image: url('https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/290/2024/07/08031329/IMG_9599.jpg');
-                      width: 2554px;
-                    "
-                    role="group"
-                    aria-label="2 / 3"
-                    data-swiper-slide-index="1"
-                  >
-                    <div class="slider_content_wrap">
-                      <div class="bh_wrap slider_content">
-                        <div class="bh bh_row ai-c h-100">
-                          <div class="bh col-12">
-                            <span class="slider_content_text_1 ts-1">
-                              DESC 1.
-                            </span>
-                            <span class="slider_content_text_2 ts-1">
-                              DESC 2.
-                            </span>
-                            <div class="slider_content_btn_wrap ts-1"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="swiper-slide item item3 swiper-slide-prev"
-                    style="
-                      background-image: url('https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/290/2024/07/08031329/IMG_9599.jpg');
-                      width: 2554px;
-                    "
-                    role="group"
-                    aria-label="3 / 3"
-                    data-swiper-slide-index="2"
-                  >
-                    <div class="slider_content_wrap">
-                      <div class="bh_wrap slider_content">
-                        <div class="bh bh_row ai-c h-100">
-                          <div class="bh col-12">
-                            <span class="slider_content_text_1 ts-1">
-                              DESC 1.
-                            </span>
-                            <span class="slider_content_text_2 ts-1">
-                              DESC 2.
-                            </span>
-                            <div class="slider_content_btn_wrap ts-1"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="swiper-slide item item1 swiper-slide-active"
-                    style="
-                      background-image: url('https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/290/2024/07/08031329/IMG_9599.jpg');
-                      width: 2554px;
-                    "
-                    role="group"
-                    aria-label="1 / 3"
-                    data-swiper-slide-index="0"
-                  >
-                    <div class="slider_content_wrap">
-                      <div class="bh_wrap slider_content">
-                        <div class="bh bh_row ai-c h-100">
-                          <div class="bh col-12">
-                            <span
-                              class="slider_content_text_1 ts-1 animated fadeInDown delay-1s"
-                            >
-                              DESC 1.
-                            </span>
-                            <span
-                              class="slider_content_text_2 ts-1 animated fadeInUp delay-2s"
-                            >
-                              DESC 2.
-                            </span>
-                            <div
-                              class="slider_content_btn_wrap ts-1 animated fadeInUp delay-3s"
-                            ></div>
-                          </div>
+                  <div class="slider_content_wrap">
+                    <div class="bh_wrap slider_content">
+                      <div class="bh bh_row ai-c h-100">
+                        <div class="bh col-12">
+                          <span
+                            class="slider_content_text_1 ts-1 animated fadeInDown delay-1s"
+                          >
+                            Hicrosma
+                          </span>
+                          <span
+                            class="slider_content_text_2 ts-1 animated fadeInUp delay-2s"
+                          >
+                            <span style="color: #051212; font-weight: bold"
+                              >최첨단 헤드스파 기술과 엄선된 천연 성분</span
+                            >으로
+                            <br />
+                            스트레스 해소와 두피 컨디션 개선은 물론 <br />전신
+                            웰빙을 위한 맞춤형 서비스를 제공합니다.
+                          </span>
+
+                          <div
+                            class="slider_content_btn_wrap ts-1 animated fadeInUp delay-3s"
+                          ></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="bh swiper_custom_wrap">
-                  <div class="bh bh_wrap">
-                    <div
-                      class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
-                    >
-                      <p
-                        class="swiper-pagination-bullet swiper-pagination-bullet-active"
-                        tabindex="0"
-                        aria-current="true"
-                      >
-                        <span class="index_number">01</span>
-                        <span class="slide_progress"
-                          ><span
-                            class="progress_inner"
-                            style="--progress: 0.06140000000000001"
-                          ></span
-                        ></span>
-                      </p>
-                      <p class="swiper-pagination-bullet" tabindex="0">
-                        <span class="index_number">02</span>
-                        <span class="slide_progress"
-                          ><span
-                            class="progress_inner"
-                            style="--progress: 0.06140000000000001"
-                          ></span
-                        ></span>
-                      </p>
-                      <p class="swiper-pagination-bullet" tabindex="0">
-                        <span class="index_number">03</span>
-                        <span class="slide_progress"
-                          ><span
-                            class="progress_inner"
-                            style="--progress: 0.06140000000000001"
-                          ></span
-                        ></span>
-                      </p>
-                    </div>
-                    <div class="slide_btn bh_color_white">
-                      <i class="ri-pause-line stopbtn active"></i>
-                      <i class="ri-play-fill playbtn"></i>
+                <div
+                  class="swiper-slide item item2"
+                  style="
+                    background-image: url('https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/290/2024/07/08031329/IMG_9599.jpg');
+                  "
+                >
+                  <div class="slider_content_wrap">
+                    <div class="bh_wrap slider_content">
+                      <div class="bh bh_row ai-c h-100">
+                        <div class="bh col-12">
+                          <span class="slider_content_text_1 ts-1">
+                            Hicrosma
+                          </span>
+                          <span class="slider_content_text_2 ts-1">
+                            <span style="color: #051212; font-weight: bold"
+                              >최첨단 헤드스파 기술과 엄선된 천연 성분</span
+                            >으로
+                            <br />
+                            스트레스 해소와 두피 컨디션 개선은 물론 <br />전신
+                            웰빙을 위한 맞춤형 서비스를 제공합니다.
+                          </span>
+                          <div class="slider_content_btn_wrap ts-1"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <span
-                  class="swiper-notification"
-                  aria-live="assertive"
-                  aria-atomic="true"
-                ></span>
+                <div
+                  class="swiper-slide item item3"
+                  style="
+                    background-image: url('https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/290/2024/07/08031329/IMG_9599.jpg');
+                  "
+                >
+                  <div class="slider_content_wrap">
+                    <div class="bh_wrap slider_content">
+                      <div class="bh bh_row ai-c h-100">
+                        <div class="bh col-12">
+                          <span class="slider_content_text_1 ts-1">
+                            Hicrosma
+                          </span>
+                          <span class="slider_content_text_2 ts-1">
+                            <span style="color: #051212; font-weight: bold"
+                              >최첨단 헤드스파 기술과 엄선된 천연 성분</span
+                            >으로
+                            <br />
+                            스트레스 해소와 두피 컨디션 개선은 물론 <br />전신
+                            웰빙을 위한 맞춤형 서비스를 제공합니다.
+                          </span>
+                          <div class="slider_content_btn_wrap ts-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="bh swiper_custom_wrap">
+                <div class="bh bh_wrap">
+                  <div class="swiper-pagination"></div>
+                  <div class="slide_btn bh_color_white">
+                    <i class="ri-pause-line stopbtn"></i>
+                    <i class="ri-play-fill playbtn"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <script>
-                $(document).ready(function () {
-                  var Stops = document.querySelector(".stopbtn");
-                  var Plays = document.querySelector(".playbtn");
+            <script>
+              $(document).ready(function () {
+                var Stops = document.querySelector(".stopbtn");
+                var Plays = document.querySelector(".playbtn");
 
-                  const swiperMain = new Swiper(".swiper-main", {
-                    pagination: {
-                      el: ".swiper-pagination",
-                      clickable: true,
-                      bulletActiveClass: "swiper-pagination-bullet-active",
-                      progressbarFillClass:
-                        "swiper-pagination-progressbar-fill",
-                      renderBullet: function (index, className) {
-                        return `<p class="${className}"><span class="index_number">0${
-                          index + 1
-                        }</span> <span class="slide_progress"><span class="progress_inner"></span></span></p>`;
-                      },
+                const swiperMain = new Swiper(".swiper-main", {
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    bulletActiveClass: "swiper-pagination-bullet-active",
+                    progressbarFillClass: "swiper-pagination-progressbar-fill",
+                    renderBullet: function (index, className) {
+                      return `<p class="${className}"><span class="index_number">0${
+                        index + 1
+                      }</span> <span class="slide_progress"><span class="progress_inner"></span></span></p>`;
                     },
-                    autoplay: {
-                      delay: 5000,
+                  },
+                  autoplay: {
+                    delay: 5000,
+                  },
+                  speed: 500,
+                  loop: true,
+                  spaceBetween: 0,
+                  breakpoints: {
+                    0: {
+                      navigation: { enabled: false },
                     },
-                    speed: 500,
-                    loop: true,
-                    spaceBetween: 0,
-                    breakpoints: {
-                      0: {
-                        navigation: { enabled: false },
-                      },
-                      992: {
-                        navigation: { enabled: true },
-                      },
+                    992: {
+                      navigation: { enabled: true },
                     },
-                    on: {
-                      init: (swiper) => {
-                        let bullets = swiper.pagination.bullets;
-                        let currentIdx = swiper.realIndex;
+                  },
+                  on: {
+                    init: (swiper) => {
+                      let bullets = swiper.pagination.bullets;
+                      let currentIdx = swiper.realIndex;
 
-                        let currentBullet = bullets[currentIdx];
-                        let currentBulletProgress =
-                          currentBullet.querySelector(".progress_inner");
+                      let currentBullet = bullets[currentIdx];
+                      let currentBulletProgress =
+                        currentBullet.querySelector(".progress_inner");
 
-                        swiper.on(
-                          "autoplayTimeLeft",
-                          (swiper, time, progress) => {
-                            currentBulletProgress.style.setProperty(
-                              "--progress",
-                              1 - progress
-                            );
-                          }
-                        );
-                      },
-                      autoplayStart: (swiper) => {
-                        Plays.classList.remove("active");
-                        Stops.classList.add("active");
-                      },
-                      autoplayStop: (swiper) => {
-                        Plays.classList.add("active");
-                        Stops.classList.remove("active");
-                      },
-                    },
-                  });
-
-                  swiperMain.on("slideChangeTransitionEnd", (swiper) =>
-                    setSlideProgress(swiper)
-                  );
-
-                  Stops.addEventListener("click", () => {
-                    swiperMain.autoplay.stop();
-                  });
-                  Plays.addEventListener("click", () => {
-                    swiperMain.autoplay.start();
-                  });
-
-                  const setSlideProgress = (swiper) => {
-                    let bullets = swiper.pagination.bullets;
-                    let currentIdx = swiper.realIndex;
-
-                    let currentBullet = bullets[currentIdx];
-                    let currentBulletProgress =
-                      currentBullet.querySelector(".progress_inner");
-
-                    swiper.on("autoplayTimeLeft", (swiper, time, progress) => {
-                      currentBulletProgress.style.setProperty(
-                        "--progress",
-                        1 - progress
+                      swiper.on(
+                        "autoplayTimeLeft",
+                        (swiper, time, progress) => {
+                          currentBulletProgress.style.setProperty(
+                            "--progress",
+                            1 - progress
+                          );
+                        }
                       );
-                    });
-                  };
-
-                  swiperMain.on("slideChange", function () {
-                    $("span.slider_content_text_1").removeClass(
-                      "animated fadeInDown delay-1s"
-                    );
-                    $("span.slider_content_text_2").removeClass(
-                      "animated fadeInUp delay-2s"
-                    );
-                    $(".slider_content_btn_wrap").removeClass(
-                      "animated fadeInUp delay-3s"
-                    );
-                    var activeSlide = $(
-                      swiperMain.slides[swiperMain.activeIndex]
-                    );
-                    activeSlide
-                      .find("span.slider_content_text_1")
-                      .addClass("animated fadeInDown delay-1s");
-                    activeSlide
-                      .find("span.slider_content_text_2")
-                      .addClass("animated fadeInUp delay-2s");
-                    activeSlide
-                      .find(".slider_content_btn_wrap")
-                      .addClass("animated fadeInUp delay-3s");
-                  });
+                    },
+                    autoplayStart: (swiper) => {
+                      Plays.classList.remove("active");
+                      Stops.classList.add("active");
+                    },
+                    autoplayStop: (swiper) => {
+                      Plays.classList.add("active");
+                      Stops.classList.remove("active");
+                    },
+                  },
                 });
-              </script>
+
+                swiperMain.on("slideChangeTransitionEnd", (swiper) =>
+                  setSlideProgress(swiper)
+                );
+
+                Stops.addEventListener("click", () => {
+                  swiperMain.autoplay.stop();
+                });
+                Plays.addEventListener("click", () => {
+                  swiperMain.autoplay.start();
+                });
+
+                const setSlideProgress = (swiper) => {
+                  let bullets = swiper.pagination.bullets;
+                  let currentIdx = swiper.realIndex;
+
+                  let currentBullet = bullets[currentIdx];
+                  let currentBulletProgress =
+                    currentBullet.querySelector(".progress_inner");
+
+                  swiper.on("autoplayTimeLeft", (swiper, time, progress) => {
+                    currentBulletProgress.style.setProperty(
+                      "--progress",
+                      1 - progress
+                    );
+                  });
+                };
+
+                swiperMain.on("slideChange", function () {
+                  $("span.slider_content_text_1").removeClass(
+                    "animated fadeInDown delay-1s"
+                  );
+                  $("span.slider_content_text_2").removeClass(
+                    "animated fadeInUp delay-2s"
+                  );
+                  $(".slider_content_btn_wrap").removeClass(
+                    "animated fadeInUp delay-3s"
+                  );
+                  var activeSlide = $(
+                    swiperMain.slides[swiperMain.activeIndex]
+                  );
+                  activeSlide
+                    .find("span.slider_content_text_1")
+                    .addClass("animated fadeInDown delay-1s");
+                  activeSlide
+                    .find("span.slider_content_text_2")
+                    .addClass("animated fadeInUp delay-2s");
+                  activeSlide
+                    .find(".slider_content_btn_wrap")
+                    .addClass("animated fadeInUp delay-3s");
+                });
+              });
+            </script>
+          </div>
+
+          <section id="section1" class="section section1 clearfix">
+            <div class="bh_wrap">
+              <div class="xe-widget-wrapper" style="">
+                <div style="padding: 0px 0px 0px 0px !important">
+                  <div class="bh bh_page_widget_wrap">
+                    <div class="bh bh_page_widget_inner">
+                      <div class="main_about">
+                        <div
+                          class="main_title animate-in"
+                          data-anim-delay="0"
+                          data-anim-type="fade-in-up"
+                        >
+                          <div class="small">ABOUT</div>
+                          <div class="big">
+                            최첨단 헤드스파와 맞춤형 케어로
+                            <br class="lg:ds-b ds-n" />
+                            두피 건강과 웰빙을 선도하는 전문 기업
+                          </div>
+                        </div>
+                        <div class="text_bg">
+                          <span>Hicrosma</span>
+                        </div>
+                        <div
+                          class="mt-50 animate-in"
+                          data-anim-delay="0"
+                          data-anim-type="fade-in-up"
+                        >
+                          <div class="fs-24 fw-b">
+                            고객의 피부와 모발 상태에 맞춘 혁신적인 제품 제공
+                          </div>
+                          <div class="fs-20 mt-20">
+                            Hicrosma는 혁신과 고객 만족을 기반으로, 글로벌
+                            시장에서도 인정받는 브랜드로 자리매김하고자 합니다.
+                            고객님의 자연스러운 아름다움과 건강한 라이프스타일을
+                            위해, 지속적인 연구와 품질 관리를 통해 최고의
+                            서비스를 제공할 것을 약속드립니다.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bh_row"></div>
             </div>
-
-            <section id="section1" class="section1 section clearfix">
-              <div class="bh_wrap">
-                <div class="xe-widget-wrapper">
-                  <div style="padding: 0px 0px 0px 0px !important">
-                    <div class="bh bh_page_widget_wrap">
-                      <div class="bh bh_page_widget_inner">
-                        <div class="main_about">
-                          <div
-                            class="main_title animate-in"
-                            data-anim-delay="0"
-                            data-anim-aos="fade-in-down"
-                          >
-                            <div class="small">ABOUT</div>
-                            <div class="big">DESC 3.</div>
-                          </div>
-                          <div class="text_bg">
-                            <span>DESC 4.</span>
-                          </div>
-                          <div
-                            class="mt-50 animate-in"
-                            data-anim-delay="0"
-                            data-anim-type="fade-in-up"
-                          >
-                            <div class="fs-24 fw-b">DESC 5.</div>
-                            <div class="fs-20 mt-20">DESC 6.</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="bh_row"></div>
-              </div>
-            </section>
-            <section id="section2" class="section section2 clearfix">
-              <div class="bh_wrap">
-                <div class="xe-widget-wrapper" style="">
-                  <div style="padding: 0px 0px 0px 0px !important">
-                    <div class="bh bh_page_widget_wrap">
-                      <div class="bh bh_page_widget_inner">
-                        <div class="main_ace">
-                          <div class="bh_wrap">
-                            <div
-                              class="main_title animate-in"
-                              data-anim-delay="0"
-                              data-anim-type="fade-in-up"
-                            >
-                              <div class="small bh_color_main_100">
-                                TECHNOLOGY
-                              </div>
-                              <div class="big bh_color_white en">
-                                Product Overview:
-                              </div>
-                              <div class="fs-20 bh_color_white mt-20">
-                                DESC 7.
-                              </div>
-                            </div>
-                          </div>
-
-                          <style>
-                            swiper-container {
-                              width: 100%;
-                              height: 100%;
-                              max-width: 1200px;
-                              margin-left: auto;
-                              margin-right: auto;
-                            }
-
-                            swiper-slide {
-                              text-align: center;
-                              background: #fff;
-                              display: flex;
-                              justify-content: center;
-                              align-items: center;
-                            }
-                          </style>
-
-                          <swiper-container
-                            class="mySwiper"
-                            pagination="false"
-                            slides-per-view="3"
-                            grid-rows="2"
-                            space-between="30"
-                            autoplay="true"
-                            autoplay-delay="5000"
-                            loop="true"
-                          >
-                            <swiper-slide>
-                              <img
-                                style="width: 100%; height: 100%"
-                                src="./images/item-1.jpeg"
-                                alt="사업아이템-1"
-                              />
-                            </swiper-slide>
-                            <swiper-slide>
-                              <img
-                                style="width: 100%; height: 100%"
-                                src="./images/item-2.jpeg"
-                                alt="사업아이템-2"
-                              />
-                            </swiper-slide>
-                            <swiper-slide>
-                              <img
-                                style="width: 100%; height: 100%"
-                                src="./images/item-3.jpeg"
-                                alt="사업아이템-3"
-                              />
-                            </swiper-slide>
-                            <swiper-slide>
-                              <img
-                                style="width: 100%; height: 100%"
-                                src="./images/item-4.jpeg"
-                                alt="사업아이템-4"
-                              />
-                            </swiper-slide>
-                            <swiper-slide>
-                              <img
-                                style="width: 100%; height: 100%"
-                                src="./images/item-5.jpeg"
-                                alt="사업아이템-5"
-                              />
-                            </swiper-slide>
-                            <swiper-slide>
-                              <img
-                                style="width: 100%; height: 100%"
-                                src="./images/item-6.jpeg"
-                                alt="사업아이템-6"
-                              />
-                            </swiper-slide>
-                          </swiper-container>
-
-                          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="bh_row"></div>
-              </div>
-            </section>
-            <section id="section5" class="section section5 clearfix">
-              <div class="bh_wrap">
-                <div class="xe-widget-wrapper" style="">
-                  <div style="padding: 0px 0px 0px 0px !important">
-                    <div class="bh bh_page_widget_wrap">
-                      <div class="bh bh_page_widget_inner">
-                        <div class="main_contact">
+          </section>
+          <section id="section2" class="section section2 clearfix">
+            <div class="bh_wrap">
+              <div class="xe-widget-wrapper" style="">
+                <div style="padding: 0px 0px 0px 0px !important">
+                  <div class="bh bh_page_widget_wrap">
+                    <div class="bh bh_page_widget_inner">
+                      <div class="main_ace">
+                        <div class="bh_wrap">
                           <div
                             class="main_title animate-in"
                             data-anim-delay="0"
                             data-anim-type="fade-in-up"
                           >
-                            <div class="small bh_color_main_300">CONTACT</div>
+                            <div class="small bh_color_main_100">
+                              TECHNOLOGY
+                            </div>
+                            <div class="big bh_color_white en">
+                              Product Overview:
+                            </div>
+
+                            <style>
+                              swiper-container {
+                                width: 100%;
+                                height: 100%;
+                                max-width: 1200px;
+                                margin-left: auto;
+                                margin-right: auto;
+                              }
+
+                              swiper-slide {
+                                text-align: center;
+                                background: #fff;
+                                display: flex;
+                                height: calc((100% - 30px) / 2) !important;
+                                justify-content: center;
+                                align-items: center;
+                                min-height: 400px;
+                                background: none;
+                              }
+                            </style>
+
+                            <!-- <swiper-container
+                              style="margin-top: 12px"
+                              class="mySwiper"
+                            >
+                              <div class="swiper-slide item item1">
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-1.jpeg"
+                                  alt="사업아이템-1"
+                                />
+                              </div>
+                              <div class="swiper-slide item item1">
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-2.jpeg"
+                                  alt="사업아이템-2"
+                                />
+                              </div>
+                              <!-- <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-3.jpeg"
+                                  alt="사업아이템-3"
+                                />
+                              </swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-4.jpeg"
+                                  alt="사업아이템-4"
+                                />
+                              </swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-5.jpeg"
+                                  alt="사업아이템-5"
+                                />
+                              </swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-6.jpeg"
+                                  alt="사업아이템-6"
+                                />
+                              </swiper-slide> -->
+
+                            <swiper-container
+                              class="mySwiper"
+                              style="margin-top: 30px"
+                              slides-per-view="3"
+                              space-between="30"
+                              pagination-type="fraction"
+                              autoplay-delay="2500"
+                              autoplay-disable-on-interaction="false"
+                              data-initial-slide="3"
+                              pagination="true"
+                              pagination-clickable="true"
+                              space-between="30"
+                            >
+                              >
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-1.jpeg"
+                                  alt="사업아이템-1"
+                                />
+                              </swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-2.jpeg"
+                                  alt="사업아이템-2"
+                              /></swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-3.jpeg"
+                                  alt="사업아이템-3"
+                              /></swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-4.jpeg"
+                                  alt="사업아이템-4"
+                              /></swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-5.jpeg"
+                                  alt="사업아이템-5"
+                              /></swiper-slide>
+                              <swiper-slide>
+                                <img
+                                  style="width: 100%; height: 100%"
+                                  src="./images/item-6.jpeg"
+                                  alt="사업아이템-6"
+                              /></swiper-slide>
+                            </swiper-container>
+
+                            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
                           </div>
-                          <div class="bh_row bh_color_white">
-                            <div
-                              class="lg:col-5 col-12 animate-in"
-                              data-anim-delay="200"
-                              data-anim-type="fade-in-up"
-                            >
-                              <div class="contact_box">
-                                <i class="ri-map-pin-fill fs-30"></i>
-                                <div class="ff-msrt fs-24 fw-b lg:mt-35 mt-15">
-                                  Address
-                                </div>
-                                <div class="lg:fs-20 fs-18 fw-m mt-10">
-                                  경기&nbsp;하남시&nbsp;미사강변로&nbsp;177,&nbsp;
-                                </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bh_row"></div>
+            </div>
+          </section>
+          <section id="section5" class="section section5 clearfix">
+            <div class="bh_wrap">
+              <div class="xe-widget-wrapper" style="">
+                <div style="padding: 0px 0px 0px 0px !important">
+                  <div class="bh bh_page_widget_wrap">
+                    <div class="bh bh_page_widget_inner">
+                      <div class="main_contact">
+                        <div
+                          class="main_title animate-in"
+                          data-anim-delay="0"
+                          data-anim-type="fade-in-up"
+                        >
+                          <div class="small bh_color_main_100">CONTACT</div>
+                          <div class="big en bh_color_white">
+                            Hicrosma와 함께 하세요.
+                          </div>
+                        </div>
+                        <div class="bh_row bh_color_white">
+                          <div
+                            class="lg:col-5 col-12 animate-in"
+                            data-anim-delay="200"
+                            data-anim-type="fade-in-up"
+                          >
+                            <div class="contact_box">
+                              <i class="ri-map-pin-fill fs-30"></i>
+                              <div class="ff-msrt fs-24 fw-b lg:mt-35 mt-15">
+                                Address
+                              </div>
+                              <div class="lg:fs-20 fs-18 fw-m mt-10">.....</div>
+                            </div>
+                          </div>
+                          <div
+                            class="lg:col-4 col-12 lg:mt-0 mt-20 animate-in"
+                            data-anim-delay="400"
+                            data-anim-type="fade-in-up"
+                          >
+                            <div class="contact_box">
+                              <i class="ri-phone-fill fs-30"></i>
+                              <div class="ff-msrt fs-24 fw-b lg:mt-35 mt-15">
+                                Fax
+                              </div>
+                              <div class="lg:fs-20 fs-18 fw-m mt-10">
+                                1111-111-1111
                               </div>
                             </div>
-                            <div
-                              class="lg:col-4 col-12 lg:mt-0 mt-20 animate-in"
-                              data-anim-delay="400"
-                              data-anim-type="fade-in-up"
-                            >
-                              <div class="contact_box">
-                                <i class="ri-phone-fill fs-30"></i>
-                                <div class="ff-msrt fs-24 fw-b lg:mt-35 mt-15">
-                                  Fax
-                                </div>
-                                <div class="lg:fs-20 fs-18 fw-m mt-10">
-                                  1111-111-1111
-                                </div>
+                          </div>
+                          <div
+                            class="lg:col-3 col-12 lg:mt-0 mt-20 animate-in"
+                            data-anim-delay="600"
+                            data-anim-type="fade-in-up"
+                          >
+                            <div class="contact_box">
+                              <i class="ri-time-fill fs-30"></i>
+                              <div class="ff-msrt fs-24 fw-b lg:mt-35 mt-15">
+                                Operating hours
                               </div>
-                            </div>
-                            <div
-                              class="lg:col-3 col-12 lg:mt-0 mt-20 animate-in"
-                              data-anim-delay="600"
-                              data-anim-type="fade-in-up"
-                            >
-                              <div class="contact_box">
-                                <i class="ri-time-fill fs-30"></i>
-                                <div class="ff-msrt fs-24 fw-b lg:mt-35 mt-15">
-                                  Operating hours
-                                </div>
-                                <div class="lg:fs-20 fs-18 fw-m mt-10">
-                                  AM 09:00 ~ PM 06:00
-                                </div>
+                              <div class="lg:fs-20 fs-18 fw-m mt-10">
+                                AM 09:00 ~ PM 06:00
                               </div>
                             </div>
                           </div>
@@ -840,122 +906,120 @@
                     </div>
                   </div>
                 </div>
-                <div class="bh_row"></div>
               </div>
-            </section>
-          </div>
-
-          <div class="content_wrap top_btn_css">
-            <div class="bh_wrap clearfix">
-              <div class="content pd-0 clearfix" id="content">
-                <div class="content_inner clearfix">
-                  <div
-                    class="rhymix_content xe_content xe-widget-wrapper"
-                    style="width: 100%; float: left"
-                    data-pswp-uid="1"
-                  >
-                    <div style="padding: 0px 0px 0px 0px !important"></div>
-                  </div>
+              <div class="bh_row"></div>
+            </div>
+          </section>
+        </div>
+        <div class="content_wrap top_btn_css">
+          <div class="bh_wrap clearfix">
+            <div class="content pd-0 clearfix" id="content">
+              <div class="content_inner clearfix">
+                <div
+                  class="rhymix_content xe_content xe-widget-wrapper"
+                  style="width: 100%; float: left"
+                >
+                  <div style="padding: 0px 0px 0px 0px !important"></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="scrollTop_wrap">
-            <a class="scrollTop bh_bg_color_white" href="#"
-              ><i class="ri-arrow-up-s-line"></i><span>TOP</span></a
-            >
           </div>
         </div>
-
-        <footer class="bh dark_no">
-          <div class="footer style_white">
-            <div class="bh_wrap">
-              <div class="bh_row no-gutters ai-c">
-                <div class="lg:col col-12">
-                  <div class="copyright col">
-                    <div id="google_translate_element"></div>
-                    <div class="fs-16 bh_color_white">
-                      <span>상호명 : 하이크로즈마</span
-                      ><span class="m-after">대표 : 11</span
-                      ><br class="lg:ds-n ds-b" />
-                      <span class="no-after">FAX : 1111-111-1111</span><br />
-                      <span class="m-after">EMAIL : 1111@111</span
-                      ><br class="lg:ds-n ds-b" />
-                      <span class="no-after"
-                        >사업자 등록번호 : 111-11-11111</span
-                      ><br />
-                      <span class="no-after"
-                        >주소 : 경기 하남시 미사강변로 177,
-                      </span>
-                    </div>
-                    <p class="fs-16 bh_color_gray_500 mt-20">
-                      Copyright 2024. 하이크로즈마 Co. All rights reserved.
-                    </p>
+        <div class="scrollTop_wrap">
+          <a class="scrollTop bh_bg_color_white" href="#"
+            ><i class="ri-arrow-up-s-line"></i><span>TOP</span></a
+          >
+        </div>
+      </div>
+      <footer class="bh dark_no">
+        <div class="footer style_white">
+          <div class="bh_wrap">
+            <div class="bh_row no-gutters ai-c">
+              <div class="footer_logo ds-n lg:ds-b">로고</div>
+              <div class="lg:col col-12">
+                <div class="copyright col">
+                  <div class="fs-16 bh_color_white">
+                    <span>상호명 : 하이크로즈마</span
+                    ><span class="m-after">대표 : -</span
+                    ><br class="lg:ds-n ds-b" />
+                    <span class="no-after">FAX : 1111-111-1111</span><br />
+                    <span class="m-after">EMAIL : 111111@hanmail.net</span
+                    ><br class="lg:ds-n ds-b" />
+                    <span class="no-after">사업자 등록번호 : 111-11-11111</span
+                    ><br />
+                    <span class="no-after">주소 : ...</span>
                   </div>
+                  <p class="fs-16 bh_color_gray_500 mt-20">
+                    Copyright 2024. 하이크로즈마 Co. All rights reserved.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+    <style>
+      .pswp__caption__center {
+        display: block;
+      }
+    </style>
+
+    <!-- ETC -->
+    <div id="rhymix_alert"></div>
+    <div id="rhymix_debug_panel"></div>
+    <div id="rhymix_debug_button"></div>
+
+    <!-- BODY JS -->
+    <script src="/files/cache/assets/minified/addons.autolink.autolink.min.js?t=1732589713"></script>
+    <script src="/files/cache/assets/minified/addons.photoswipe.PhotoSwipe.photoswipe.min.js?t=1732589713"></script>
+    <script src="/files/cache/assets/minified/addons.photoswipe.PhotoSwipe.photoswipe-ui-default.min.js?t=1732589713"></script>
+    <script src="/files/cache/assets/minified/addons.photoswipe.rx_photoswipe.min.js?t=1732589713"></script>
+    <script src="/files/cache/assets/minified/layouts.ethicstem.layout.min.js?t=1732589713"></script>
+    <script src="/files/cache/assets/minified/layouts.ethicstem.page.min.js?t=1732589713"></script>
+
+    
     <script>
-      function toggleDropdown(m = false) {
-        let dropdown = m
-          ? document.getElementById("m-dropdown")
-          : document.getElementById("dropdown");
-        dropdown.style.display =
-          dropdown.style.display === "block" ? "none" : "block";
-      }
-
-      function changeLanguage(lang, flagUrl, m = false) {
-        const prevTxt = document.getElementById("selected-text").innerText;
-        const prevFlag = document.querySelector(".selected-lang img").src;
-
-        document.querySelector(`.dropdown > .${lang}`).remove();
-
-        const langDiv = document.createElement("div");
-        langDiv.className = prevTxt;
-        langDiv.onclick = () => changeLanguage(prevTxt, prevFlag);
-
-        langDiv.innerHTML = `<img class="${prevTxt}" src="${prevFlag}" > ${prevTxt}`;
-        document.getElementById("dropdown").appendChild(langDiv);
-
-        document.getElementById("selected-text").innerText = lang;
-        document.querySelector(".selected-lang img").src = flagUrl;
-
-        const googleTranslateSelect = document.querySelector(".goog-te-combo");
-        googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
-        googleTranslateSelect.dispatchEvent(new Event("change"));
-
-        toggleDropdown(m);
-      }
-
-      // 클릭 외부 감지하여 닫기
-      document.addEventListener("click", function (event) {
-        let selector = document.querySelector(".language-selector");
-        if (!selector.contains(event.target)) {
-          document.getElementById("dropdown").style.display = "none";
+        function toggleDropdown(m = false) {
+          let dropdown = m
+            ? document.getElementById("m-dropdown")
+            : document.getElementById("dropdown");
+          dropdown.style.display =
+            dropdown.style.display === "block" ? "none" : "block";
         }
-      });
-    </script>
-
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: "ko", // 기본 언어 (현재 한국어)
-            includedLanguages:
-              "ko,zh-CN,zh-TW,ja,vi,th,tl,km,my,mn,ru,en,fr,ar", // 지원할 번역 언어
-            // autoDisplay: false, // 자동 번역 방지 (사용자가 선택하도록 설정)
-          },
-          "google_translate_element"
-        );
-      }
-    </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+        function changeLanguage(lang, flagUrl, m = false) {
+          const prevTxt = document.getElementById("selected-text").innerText;
+          const prevFlag = document.querySelector(".selected-lang img").src;
+  
+          document.querySelector(`.dropdown > .${lang}`).remove();
+  
+          const langDiv = document.createElement("div");
+          langDiv.className = prevTxt;
+          langDiv.onclick = () => changeLanguage(prevTxt, prevFlag);
+  
+          langDiv.innerHTML = `<img class="${prevTxt}" src="${prevFlag}" > ${prevTxt}`;
+          document.getElementById("dropdown").appendChild(langDiv);
+  
+          document.getElementById("selected-text").innerText = lang;
+          document.querySelector(".selected-lang img").src = flagUrl;
+  
+          const googleTranslateSelect = document.querySelector(".goog-te-combo");
+          googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
+          googleTranslateSelect.dispatchEvent(new Event("change"));
+  
+          toggleDropdown(m);
+        }
+  
+        // 클릭 외부 감지하여 닫기
+        document.addEventListener("click", function (event) {
+          let selector = document.querySelector(".language-selector");
+          if (!selector.contains(event.target)) {
+            document.getElementById("dropdown").style.display = "none";
+          }
+        });
+      </script>
+  
   </body>
 </html>
