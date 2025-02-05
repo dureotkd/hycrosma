@@ -218,7 +218,8 @@
         /* width: 16px;
         height: 16px; */
       }
-      .dropdown {
+      .dropdown,
+      .m-dropdown {
         display: none;
         position: absolute;
         background: white;
@@ -230,16 +231,19 @@
         margin-left: 2px;
         margin-top: 1px;
       }
-      .dropdown div {
+      .dropdown div,
+      .m-dropdown div {
         display: flex;
         align-items: center;
         padding: 8px 10px;
         cursor: pointer;
       }
-      .dropdown div:hover {
+      .dropdown div:hover,
+      .m-dropdown div:hover {
         background: #f1f1f1;
       }
-      .dropdown img {
+      .dropdown img,
+      .m-dropdown img {
         margin-right: 5px;
       }
 
@@ -318,22 +322,22 @@
             </div>
 
             <div class="language-selector">
-              <div class="selected-lang" onclick="toggleDropdown()">
+              <div class="selected-lang" onclick="toggleDropdown(true)">
                 <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
                 <span id="selected-text">ko</span>
                 <i class="ri-arrow-down-s-line"></i>
               </div>
-              <div class="dropdown" id="dropdown">
+              <div class="m-dropdown" id="m-dropdown">
                 <div
                   class="en"
-                  onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png')"
+                  onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png',true)"
                 >
                   <img src="https://flagcdn.com/w40/us.png" alt="US Flag" />
                   en
                 </div>
                 <div
                   class="cn"
-                  onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png')"
+                  onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png',true)"
                 >
                   <img src="https://flagcdn.com/w40/cn.png" alt="CN Flag" />
                   cn
@@ -899,13 +903,15 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script>
-      function toggleDropdown() {
-        let dropdown = document.getElementById("dropdown");
+      function toggleDropdown(m = false) {
+        let dropdown = m
+          ? document.getElementById("m-dropdown")
+          : document.getElementById("dropdown");
         dropdown.style.display =
           dropdown.style.display === "block" ? "none" : "block";
       }
 
-      function changeLanguage(lang, flagUrl) {
+      function changeLanguage(lang, flagUrl, m = false) {
         const prevTxt = document.getElementById("selected-text").innerText;
         const prevFlag = document.querySelector(".selected-lang img").src;
 
@@ -925,7 +931,7 @@
         googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
         googleTranslateSelect.dispatchEvent(new Event("change"));
 
-        toggleDropdown();
+        toggleDropdown(m);
       }
 
       // 클릭 외부 감지하여 닫기
