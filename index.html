@@ -9,14 +9,8 @@
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
     <meta name="csrf-token" content="ZES24VRTJztBoTl2" />
-    <meta
-      name="keywords"
-      content="헤어스파,헤어,스파,하이크로즈마,Hicrosma"
-    />
-    <meta
-      name="description"
-      content="헤어스파 개발 업체입니다."
-    />
+    <meta name="keywords" content="헤어스파,헤어,스파,하이크로즈마,HYCROSMA" />
+    <meta name="description" content="헤어스파 개발 업체입니다." />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
@@ -29,6 +23,11 @@
     <link
       rel="stylesheet"
       href="https://ethicstem.kr/files/cache/assets/combined/576d8fd150c8594ce1a58a23a164ef5da0892559.css?t=1732863494"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
     />
 
     <link
@@ -80,25 +79,21 @@
     <meta name="twitter:description" content="" />
     <meta property="og:title" content="하이크로즈마" />
     <meta property="og:site_name" content="헤어스파 전문 솔루션" />
-    <meta property="og:description" content="헤어스파,헤어,스파,하이크로즈마,Hicrosma" />
+    <meta
+      property="og:description"
+      content="헤어스파,헤어,스파,하이크로즈마,HYCROSMA"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/" />
     <meta property="og:locale" content="ko_KR" />
-    <meta
-      property="og:image"
-      content=""
-    />
+    <meta property="og:image" content="" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      name="naver-site-verification"
-      content="7ab806966faa1302db536465fe1cacb0a48a5bc6"
-    />
-    <meta
-      name="google-site-verification"
-      content="MCRsbKc7reXNYz3IGF51gun2c3EoEG4SsoGi4-axeKQ"
-    />
     <style>
+      .logo-font {
+        font-family: "Playfair Display", serif !important;
+      }
+
       .sub_top_banner {
         height: 400px;
       }
@@ -209,10 +204,6 @@
         border-radius: 5px;
         background: white;
       }
-      .selected-lang img {
-        /* width: 16px;
-            height: 16px; */
-      }
       .dropdown,
       .m-dropdown {
         display: none;
@@ -245,6 +236,12 @@
       .goog-te-gadget {
         /* opacity: 0 !important; */
         display: none !important;
+      }
+
+      @media (min-width: 1200px) {
+        .main_about .text_bg span {
+          font-size: 170px;
+        }
       }
     </style>
     <link
@@ -288,40 +285,49 @@
               </a>
             </h1>
 
+            <nav class="main_menu menu_wrap col-auto" id="main_menu">
+              <ul class="bh_wrap">
+                <li class="menu_dropdown">
+                  <a
+                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
+                    href="/company"
+                    ><span>회사소개</span></a
+                  >
+                </li>
+              </ul>
+            </nav>
+
             <div class="language-selector">
-                <div class="selected-lang" onclick="toggleDropdown()">
-                  <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
-                  <span id="selected-text">ko</span>
-                  <i class="ri-arrow-down-s-line"></i>
+              <div class="selected-lang" onclick="toggleDropdown()">
+                <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
+                <span id="selected-text">ko</span>
+                <i class="ri-arrow-down-s-line"></i>
+              </div>
+              <div class="dropdown" id="dropdown">
+                <div
+                  class="en"
+                  onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png')"
+                >
+                  <img src="https://flagcdn.com/w40/us.png" alt="US Flag" />
+                  en
                 </div>
-                <div class="dropdown" id="dropdown">
-                  <div
-                    class="en"
-                    onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png')"
-                  >
-                    <img src="https://flagcdn.com/w40/us.png" alt="US Flag" />
-                    en
-                  </div>
-                  <div
-                    class="cn"
-                    onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png')"
-                  >
-                    <img src="https://flagcdn.com/w40/cn.png" alt="CN Flag" />
-                    cn
-                  </div>
+                <div
+                  class="cn"
+                  onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png')"
+                >
+                  <img src="https://flagcdn.com/w40/cn.png" alt="CN Flag" />
+                  cn
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </header>
       <header class="bh mobile_header_wrap">
         <div class="bh mobile_header_top bh_bg_color_white">
           <div class="bh mobile_logo">
-            <a href="/">
-             LOGO
+            <a href="/">LOGO</a>
           </div>
-
-          
         </div>
       </header>
 
@@ -438,9 +444,9 @@
                       <div class="bh bh_row ai-c h-100">
                         <div class="bh col-12">
                           <span
-                            class="slider_content_text_1 ts-1 animated fadeInDown delay-1s"
+                            class="slider_content_text_1 ts-1 animated fadeInDown delay-1s logo-font"
                           >
-                            Hicrosma
+                            HYCROSMA
                           </span>
                           <span
                             class="slider_content_text_2 ts-1 animated fadeInUp delay-2s"
@@ -471,8 +477,8 @@
                     <div class="bh_wrap slider_content">
                       <div class="bh bh_row ai-c h-100">
                         <div class="bh col-12">
-                          <span class="slider_content_text_1 ts-1">
-                            Hicrosma
+                          <span class="slider_content_text_1 ts-1 logo-font">
+                            HYCROSMA
                           </span>
                           <span class="slider_content_text_2 ts-1">
                             <span style="color: #051212; font-weight: bold"
@@ -498,8 +504,8 @@
                     <div class="bh_wrap slider_content">
                       <div class="bh bh_row ai-c h-100">
                         <div class="bh col-12">
-                          <span class="slider_content_text_1 ts-1">
-                            Hicrosma
+                          <span class="slider_content_text_1 ts-1 logo-font">
+                            HYCROSMA
                           </span>
                           <span class="slider_content_text_2 ts-1">
                             <span style="color: #051212; font-weight: bold"
@@ -662,7 +668,7 @@
                           </div>
                         </div>
                         <div class="text_bg">
-                          <span>Hicrosma</span>
+                          <span class="logo-font">HYCROSMA</span>
                         </div>
                         <div
                           class="mt-50 animate-in"
@@ -673,11 +679,12 @@
                             고객의 피부와 모발 상태에 맞춘 혁신적인 제품 제공
                           </div>
                           <div class="fs-20 mt-20">
-                            Hicrosma는 혁신과 고객 만족을 기반으로, 글로벌
-                            시장에서도 인정받는 브랜드로 자리매김하고자 합니다.
-                            고객님의 자연스러운 아름다움과 건강한 라이프스타일을
-                            위해, 지속적인 연구와 품질 관리를 통해 최고의
-                            서비스를 제공할 것을 약속드립니다.
+                            <span class="logo-font">HYCROSMA</span>는 혁신과
+                            고객 만족을 기반으로, 글로벌 시장에서도 인정받는
+                            브랜드로 자리매김하고자 합니다. 고객님의 자연스러운
+                            아름다움과 건강한 라이프스타일을 위해, 지속적인
+                            연구와 품질 관리를 통해 최고의 서비스를 제공할 것을
+                            약속드립니다.
                           </div>
                         </div>
                       </div>
@@ -852,9 +859,10 @@
                           data-anim-delay="0"
                           data-anim-type="fade-in-up"
                         >
-                          <div class="small bh_color_main_100">CONTACT</div>
-                          <div class="big en bh_color_white">
-                            Hicrosma와 함께 하세요.
+                          <div class="small bh_color_main_300">CONTACT</div>
+                          <div class="big en bh_color_black">
+                            <span class="logo-font"> HYCROSMA </span>와 함께
+                            하세요.
                           </div>
                         </div>
                         <div class="bh_row bh_color_white">
@@ -979,47 +987,45 @@
     <script src="/files/cache/assets/minified/layouts.ethicstem.layout.min.js?t=1732589713"></script>
     <script src="/files/cache/assets/minified/layouts.ethicstem.page.min.js?t=1732589713"></script>
 
-    
     <script>
-        function toggleDropdown(m = false) {
-          let dropdown = m
-            ? document.getElementById("m-dropdown")
-            : document.getElementById("dropdown");
-          dropdown.style.display =
-            dropdown.style.display === "block" ? "none" : "block";
+      function toggleDropdown(m = false) {
+        let dropdown = m
+          ? document.getElementById("m-dropdown")
+          : document.getElementById("dropdown");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      function changeLanguage(lang, flagUrl, m = false) {
+        const prevTxt = document.getElementById("selected-text").innerText;
+        const prevFlag = document.querySelector(".selected-lang img").src;
+
+        document.querySelector(`.dropdown > .${lang}`).remove();
+
+        const langDiv = document.createElement("div");
+        langDiv.className = prevTxt;
+        langDiv.onclick = () => changeLanguage(prevTxt, prevFlag);
+
+        langDiv.innerHTML = `<img class="${prevTxt}" src="${prevFlag}" > ${prevTxt}`;
+        document.getElementById("dropdown").appendChild(langDiv);
+
+        document.getElementById("selected-text").innerText = lang;
+        document.querySelector(".selected-lang img").src = flagUrl;
+
+        const googleTranslateSelect = document.querySelector(".goog-te-combo");
+        googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
+        googleTranslateSelect.dispatchEvent(new Event("change"));
+
+        toggleDropdown(m);
+      }
+
+      // 클릭 외부 감지하여 닫기
+      document.addEventListener("click", function (event) {
+        let selector = document.querySelector(".language-selector");
+        if (!selector.contains(event.target)) {
+          document.getElementById("dropdown").style.display = "none";
         }
-  
-        function changeLanguage(lang, flagUrl, m = false) {
-          const prevTxt = document.getElementById("selected-text").innerText;
-          const prevFlag = document.querySelector(".selected-lang img").src;
-  
-          document.querySelector(`.dropdown > .${lang}`).remove();
-  
-          const langDiv = document.createElement("div");
-          langDiv.className = prevTxt;
-          langDiv.onclick = () => changeLanguage(prevTxt, prevFlag);
-  
-          langDiv.innerHTML = `<img class="${prevTxt}" src="${prevFlag}" > ${prevTxt}`;
-          document.getElementById("dropdown").appendChild(langDiv);
-  
-          document.getElementById("selected-text").innerText = lang;
-          document.querySelector(".selected-lang img").src = flagUrl;
-  
-          const googleTranslateSelect = document.querySelector(".goog-te-combo");
-          googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
-          googleTranslateSelect.dispatchEvent(new Event("change"));
-  
-          toggleDropdown(m);
-        }
-  
-        // 클릭 외부 감지하여 닫기
-        document.addEventListener("click", function (event) {
-          let selector = document.querySelector(".language-selector");
-          if (!selector.contains(event.target)) {
-            document.getElementById("dropdown").style.display = "none";
-          }
-        });
-      </script>
-  
+      });
+    </script>
   </body>
 </html>
