@@ -95,11 +95,44 @@
         border-radius: 5px;
         background: white;
       }
+      .dropdown,
+      .m-dropdown {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        margin-left: 2px;
+        margin-top: 1px;
+      }
+      .dropdown div,
+      .m-dropdown div {
+        display: flex;
+        align-items: center;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+      .dropdown div:hover,
+      .m-dropdown div:hover {
+        background: #f1f1f1;
+      }
+      .dropdown img,
+      .m-dropdown img {
+        margin-right: 5px;
+      }
+
+      .goog-te-gadget {
+        /* opacity: 0 !important; */
+        display: none !important;
+      }
     </style>
     <style></style>
     <style>
       .sub_top_banner {
-        background-image: url("https://ethicstem.kr/files/attach/images/109/205d30b8a37cd55780a6f7d89c31bf9e.jpg");
+        background-image: url("https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
       }
     </style>
     <style type="text/css">
@@ -157,7 +190,7 @@
                   <a
                     class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
                     style="text-decoration: underline"
-                    href="/company"
+                    href="/company.html"
                     ><span>회사소개</span></a
                   >
                 </li>
@@ -293,7 +326,7 @@
             <div class="sub_top_banner_content_wrap">
               <div class="bh bh_row ai-c h-100 mg-0">
                 <div class="bh col-12">
-                  <span class="bh_color_white ts-1">PORTFOLIO</span>
+                  <span class="bh_color_white ts-1">HYCROSMA LTD</span>
                   <div
                     class="hr-line bh_bg_color_white mt-10"
                     style="height: 2px"
@@ -303,58 +336,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="bh middle_breadcrumb_menu clearfix">
-          <div class="bh bh_wrap">
-            <ul>
-              <li>
-                <a href="https://ethicstem.kr/"
-                  ><img src="/files/attach/images/sub/home.png" alt="home"
-                /></a>
-              </li>
-              <li id="middle_breadcrumb_menu_li6">
-                <a class="bh" href="/ace1">PORTFOLIO</a>
-                <ul class="bh_toggle_content">
-                  <li>
-                    <a class="hover:bh_color_main" href="/overview">ABOUT</a>
-                  </li>
-                  <li>
-                    <a class="hover:bh_color_main" href="/technology"
-                      >TECHNOLOGY</a
-                    >
-                  </li>
-                  <li class="active">
-                    <a class="hover:bh_color_main" href="/ace1">PORTFOLIO</a>
-                  </li>
-                  <li>
-                    <a class="hover:bh_color_main" href="/news">NEWSROOM</a>
-                  </li>
-                  <li>
-                    <a class="hover:bh_color_main" href="/contact">CONTACT</a>
-                  </li>
-                </ul>
-                <div class="bh_toggle">
-                  <i class="bh_toggle_down xi-angle-down"></i>
-                  <i class="bh_toggle_up xi-angle-up"></i>
-                </div>
-              </li>
-              <li id="middle_breadcrumb_menu_li2">
-                <a class="bh" href="/ace1">ACE1</a>
-                <ul class="bh_toggle_content">
-                  <li class="active">
-                    <a class="hover:bh_color_main" href="/ace1">ACE1</a>
-                  </li>
-                  <li>
-                    <a class="hover:bh_color_main" href="/ace2">ACE2</a>
-                  </li>
-                </ul>
-                <div class="bh_toggle">
-                  <i class="bh_toggle_down xi-angle-down"></i>
-                  <i class="bh_toggle_up xi-angle-up"></i>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
         <div class="content_wrap top_btn_css">
@@ -374,39 +355,74 @@
                             data-anim-delay="0"
                             data-anim-type="fade-in-up"
                           >
-                            ACE1
-                          </div>
-                          <div
-                            class="ace_img_wrap animate-in"
-                            data-anim-delay="0"
-                            data-anim-type="fade-in-up"
-                          >
-                            <div class="title">ACE1</div>
-                            <div class="img">
-                              <img
-                                src="/files/attach/images/sub/ace-1.png"
-                                alt="img"
-                              />
-                            </div>
+                            회사 소개
                           </div>
                           <div
                             class="ace_text_wrap lg:mt-50 mt-25 animate-in"
                             data-anim-delay="0"
                             data-anim-type="fade-in-up"
                           >
-                            <div class="fs-18 fw-m ta-c">
-                              A clinical-grade hiPSC, derived from cord blood,
-                              was provided by our collaborator Yipcell Inc.<br />
-                              and has been maintained and studied in non-GMP
-                              laboratory settings.<br />
+                            <div class="fs-18 fw-m">
+                              하이크로즈마는 메디컬 에스테틱 수준의 자체
+                              독자개발의 첨단 기술 장비가 결합된 프리미엄 피부
+                              관리, 그리고 자연과 조화를 이루는 동양의
+                              전통문화와 예술이 결합된 새로운 개념의 헤드스파
+                              브랜드입니다. 최상의 품질과 차별화된 서비스를 통해
+                              고객의 피부 건강과 마음 치유 , 아름다움을
+                              극대화하는 것을 목표로 합니다.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="common_ace_wrap lg:mt-50 mt-25">
+                          <div
+                            class="sub_title animate-in"
+                            data-anim-delay="0"
+                            data-anim-type="fade-in-up"
+                          >
+                            비전 & 미션
+                          </div>
+                          <div
+                            class="ace_text_wrap lg:mt-50 mt-25 animate-in"
+                            data-anim-delay="0"
+                            data-anim-type="fade-in-up"
+                          >
+                            <div class="fs-18 fw-m">
+                              1. 메디컬 에스테틱 수준의 전문적인 피부 관리
+                              시스템 도입
                               <br />
-                              Two different protocols were used to generate
-                              CECs: the first method involved differentiating
-                              iPSCs into CECs via the NCC stage,
-                              <br class="lg:ds-b ds-n" />
-                              while the second method entailed direct
-                              differentiation of iPSCs into CECs without the NCC
-                              step.
+                              2. 첨단 기술 장비를 활용한 혁신적인 뷰티 케어 제공
+                              <br />
+                              3. 자연재료와 동양문화예술의 조화를 이루는
+                              헤드스파 경험
+                              <br />
+                              4. 고객 중심의 맞춤형 케어와 지속 가능한 피부
+                              솔루션
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="common_ace_wrap lg:mt-50 mt-25">
+                          <div
+                            class="sub_title animate-in"
+                            data-anim-delay="0"
+                            data-anim-type="fade-in-up"
+                          >
+                            서비스 & 특장점
+                          </div>
+                          <div
+                            class="ace_text_wrap lg:mt-50 mt-25 animate-in"
+                            data-anim-delay="0"
+                            data-anim-type="fade-in-up"
+                          >
+                            <div class="fs-18 fw-m">
+                              1. 개인별 피부 분석을 통해 최적의 트리트먼트를
+                              제공합니다.
+                              <br />
+                              2. 멀티 플라즈마, 고주파, 미백토닝 레이저 등
+                              다양한 혁신 기기 활용
+                              <br />
+                              3. 자연요법과 아로마 테라피를 접목한 힐링 프로그램
                             </div>
                           </div>
                         </div>
@@ -428,39 +444,22 @@
         <div class="footer style_white">
           <div class="bh_wrap">
             <div class="bh_row no-gutters ai-c">
-              <div class="footer_logo ds-n lg:ds-b">
-                <img
-                  src="https://ethicstem.kr/files/attach/images/109/89a484ebfac813f4b10d010de17fedc0.png"
-                  alt="footer_logo"
-                />
-              </div>
+              <div class="footer_logo ds-n lg:ds-b">로고</div>
               <div class="lg:col col-12">
-                <nav class="footer_menu" id="footer_menu">
-                  <ul>
-                    <li>
-                      <a class="bh bh_color_white fw-b" href="/privacy"
-                        ><span>개인정보처리방침</span></a
-                      >
-                    </li>
-                  </ul>
-                </nav>
                 <div class="copyright col">
                   <div class="fs-16 bh_color_white">
-                    <span>상호명 : 에틱스템</span
-                    ><span class="m-after">대표 : 이훈</span
+                    <span>상호명 : 하이크로즈마</span
+                    ><span class="m-after">대표 : -</span
                     ><br class="lg:ds-n ds-b" />
-                    <span class="no-after">FAX : 0504-204-7071</span><br />
-                    <span class="m-after">EMAIL : yhun777@hanmail.net</span
+                    <span class="no-after">FAX : 1111-111-1111</span><br />
+                    <span class="m-after">EMAIL : 111111@hanmail.net</span
                     ><br class="lg:ds-n ds-b" />
-                    <span class="no-after">사업자 등록번호 : 352-87-02797</span
+                    <span class="no-after">사업자 등록번호 : 111-11-11111</span
                     ><br />
-                    <span class="no-after"
-                      >주소 : 경기 하남시 미사강변로 177,
-                      하남스타트업캠퍼스</span
-                    >
+                    <span class="no-after">주소 : ...</span>
                   </div>
                   <p class="fs-16 bh_color_gray_500 mt-20">
-                    Copyright 2024. 에틱스템 Co. All rights reserved.
+                    Copyright 2024. 하이크로즈마 Co. All rights reserved.
                   </p>
                 </div>
               </div>
@@ -477,5 +476,46 @@
     <script src="https://ethicstem.kr/files/cache/assets/minified/addons.photoswipe.rx_photoswipe.min.js?t=1732589713"></script>
     <script src="https://ethicstem.kr/files/cache/assets/minified/layouts.ethicstem.layout.min.js?t=1732589713"></script>
     <script src="https://ethicstem.kr/files/cache/assets/minified/layouts.ethicstem.page.min.js?t=1732589713"></script>
+
+    <script>
+      function toggleDropdown(m = false) {
+        let dropdown = m
+          ? document.getElementById("m-dropdown")
+          : document.getElementById("dropdown");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      function changeLanguage(lang, flagUrl, m = false) {
+        const prevTxt = document.getElementById("selected-text").innerText;
+        const prevFlag = document.querySelector(".selected-lang img").src;
+
+        document.querySelector(`.dropdown > .${lang}`).remove();
+
+        const langDiv = document.createElement("div");
+        langDiv.className = prevTxt;
+        langDiv.onclick = () => changeLanguage(prevTxt, prevFlag);
+
+        langDiv.innerHTML = `<img class="${prevTxt}" src="${prevFlag}" > ${prevTxt}`;
+        document.getElementById("dropdown").appendChild(langDiv);
+
+        document.getElementById("selected-text").innerText = lang;
+        document.querySelector(".selected-lang img").src = flagUrl;
+
+        const googleTranslateSelect = document.querySelector(".goog-te-combo");
+        googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
+        googleTranslateSelect.dispatchEvent(new Event("change"));
+
+        toggleDropdown(m);
+      }
+
+      // 클릭 외부 감지하여 닫기
+      document.addEventListener("click", function (event) {
+        let selector = document.querySelector(".language-selector");
+        if (!selector.contains(event.target)) {
+          document.getElementById("dropdown").style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
