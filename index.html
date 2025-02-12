@@ -170,6 +170,22 @@
       .ri-close-fill {
         margin-top: 23px;
       }
+      /*  */
+      .bh .mobile_main_menu > ul > li > .bh_toggle {
+        display: flex;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        flex-direction: column;
+      }
+
+      .bh .mobile_main_menu > ul > li > .bh_toggle i {
+        padding: 0px;
+        margin-right: 20px;
+      }
+
+      .ri-arrow-down-s-line:before {
+        font-size: 24px;
+      }
 
       @media (max-width: 992px) {
         .bh .section1 {
@@ -243,6 +259,10 @@
         margin-right: 5px;
       }
 
+      .bh .main_menu > ul > li > a::after {
+        color: #000 !important;
+      }
+
       .goog-te-gadget {
         /* opacity: 0 !important; */
         display: none !important;
@@ -302,7 +322,7 @@
                 <li class="menu_dropdown">
                   <a
                     class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
-                    href="/overview"
+                    href="/company"
                     ><span>ABOUT</span></a
                   >
                   <ul class="menu_dropdown-content">
@@ -316,21 +336,6 @@
                         >Mission</a
                       >
                     </li>
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/leadership"
-                        >Leadership</a
-                      >
-                    </li>
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/mi"
-                        >Member Introduction</a
-                      >
-                    </li>
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/patent"
-                        >Patent</a
-                      >
-                    </li>
                   </ul>
                 </li>
                 <li class="menu_dropdown">
@@ -341,45 +346,8 @@
                   >
                   <ul class="menu_dropdown-content">
                     <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/technology"
-                        >Our Technology</a
-                      >
-                    </li>
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/pipeline"
-                        >Pipeline</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu_dropdown">
-                  <a
-                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
-                    href="/ace1"
-                    ><span>PORTFOLIO</span></a
-                  >
-                  <ul class="menu_dropdown-content">
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/ace1">ACE1</a>
-                    </li>
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/ace2">ACE2</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu_dropdown">
-                  <a
-                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
-                    href="/news"
-                    ><span>NEWSROOM</span></a
-                  >
-                  <ul class="menu_dropdown-content">
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/news">News</a>
-                    </li>
-                    <li class="">
-                      <a class="uphover:bh_bg_color_main" href="/event"
-                        >Event</a
+                      <a class="uphover:bh_bg_color_main" href="/overview"
+                        >Out Technology</a
                       >
                     </li>
                   </ul>
@@ -387,6 +355,7 @@
                 <li class="">
                   <a
                     class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
+                    style="font-weight: bold"
                     href="/contact"
                     ><span>CONTACT</span></a
                   >
@@ -394,7 +363,7 @@
               </ul>
             </nav>
 
-            <div class="language-selector">
+            <div class="language-selector" style="margin-left: 12px">
               <div class="selected-lang" onclick="toggleDropdown()">
                 <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
                 <span id="selected-text">ko</span>
@@ -449,7 +418,7 @@
             <nav class="bh mobile_main_menu">
               <ul>
                 <li>
-                  <a class="bh" href="/overview"> ABOUT</a>
+                  <a class="bh" href="#"> ABOUT</a>
                   <ul class="bh_toggle_content">
                     <li>
                       <a href="/overview">- Overview</a>
@@ -458,67 +427,28 @@
                       <a href="/mission">- Mission</a>
                     </li>
                     <li>
-                      <a href="/leadership">- Leadership</a>
-                    </li>
-                    <li>
-                      <a href="/mi">- Member Introduction</a>
-                    </li>
-                    <li>
-                      <a href="/patent">- Patent</a>
+                      <a href="/leadership">- Service</a>
                     </li>
                   </ul>
-                  <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
+                  <div class="bh_toggle" onclick="handle_mobile_menu(event)">
+                    <i class="ri-arrow-down-s-line"></i>
                     <i class="bh_toggle_up xi-angle-up"></i>
                   </div>
                 </li>
                 <li>
-                  <a class="bh" href="/technology"> TECHNOLOGY</a>
+                  <a class="bh" href="#"> TECHNOLOGY</a>
                   <ul class="bh_toggle_content">
                     <li>
                       <a href="/technology">- Our Technology</a>
                     </li>
-                    <li>
-                      <a href="/pipeline">- Pipeline</a>
-                    </li>
                   </ul>
-                  <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
+                  <div class="bh_toggle" onclick="handle_mobile_menu(event)">
+                    <i class="ri-arrow-down-s-line"></i>
                     <i class="bh_toggle_up xi-angle-up"></i>
                   </div>
                 </li>
                 <li>
-                  <a class="bh" href="/ace1"> PORTFOLIO</a>
-                  <ul class="bh_toggle_content">
-                    <li>
-                      <a href="/ace1">- ACE1</a>
-                    </li>
-                    <li>
-                      <a href="/ace2">- ACE2</a>
-                    </li>
-                  </ul>
-                  <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
-                    <i class="bh_toggle_up xi-angle-up"></i>
-                  </div>
-                </li>
-                <li>
-                  <a class="bh" href="/news"> NEWSROOM</a>
-                  <ul class="bh_toggle_content">
-                    <li>
-                      <a href="/news">- News</a>
-                    </li>
-                    <li>
-                      <a href="/event">- Event</a>
-                    </li>
-                  </ul>
-                  <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
-                    <i class="bh_toggle_up xi-angle-up"></i>
-                  </div>
-                </li>
-                <li>
-                  <a class="bh" href="/contact"> CONTACT</a>
+                  <a class="bh" href="/contact">CONTACT</a>
                 </li>
               </ul>
             </nav>
@@ -548,17 +478,11 @@
                       <a href="/mission">- Mission</a>
                     </li>
                     <li>
-                      <a href="/leadership">- Leadership</a>
-                    </li>
-                    <li>
-                      <a href="/mi">- Member Introduction</a>
-                    </li>
-                    <li>
-                      <a href="/patent">- Patent</a>
+                      <a href="/leadership">- Service</a>
                     </li>
                   </ul>
                   <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="ri-arrow-down-s-line"></i>
                     <i class="bh_toggle_up xi-angle-up"></i>
                   </div>
                 </li>
@@ -568,12 +492,9 @@
                     <li>
                       <a href="/technology">- Our Technology</a>
                     </li>
-                    <li>
-                      <a href="/pipeline">- Pipeline</a>
-                    </li>
                   </ul>
                   <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="ri-arrow-down-s-line"></i>
                     <i class="bh_toggle_up xi-angle-up"></i>
                   </div>
                 </li>
@@ -588,7 +509,7 @@
                     </li>
                   </ul>
                   <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="ri-arrow-down-s-line"></i>
                     <i class="bh_toggle_up xi-angle-up"></i>
                   </div>
                 </li>
@@ -603,7 +524,7 @@
                     </li>
                   </ul>
                   <div class="bh_toggle">
-                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="ri-arrow-down-s-line"></i>
                     <i class="bh_toggle_up xi-angle-up"></i>
                   </div>
                 </li>
@@ -1185,6 +1106,10 @@
         } else {
           $(".mobile_menu").addClass("on");
         }
+      }
+
+      function handle_mobile_menu(event) {
+        $(event.currentTarget).siblings(".bh_toggle_content").eq(0).toggle();
       }
 
       function toggleDropdown(m = false) {
