@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <!-- COMMON HEAD -->
+
   <head>
     <!-- META -->
     <meta charset="utf-8" />
@@ -161,6 +163,14 @@
         padding: 100px 0 150px 0;
       }
 
+      .ri-close-fill:before {
+        font-size: 36px !important;
+      }
+
+      .ri-close-fill {
+        margin-top: 23px;
+      }
+
       @media (max-width: 992px) {
         .bh .section1 {
           padding: 50px 0;
@@ -250,6 +260,8 @@
     />
   </head>
 
+  <!-- COMMON HEAD -->
+
   <!-- BODY START -->
   <body class="color_scheme_light">
     <!-- COMMON JS VARIABLES -->
@@ -290,8 +302,93 @@
                 <li class="menu_dropdown">
                   <a
                     class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
-                    href="/company.html"
-                    ><span>회사소개</span></a
+                    href="/overview"
+                    ><span>ABOUT</span></a
+                  >
+                  <ul class="menu_dropdown-content">
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/overview"
+                        >Overview</a
+                      >
+                    </li>
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/mission"
+                        >Mission</a
+                      >
+                    </li>
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/leadership"
+                        >Leadership</a
+                      >
+                    </li>
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/mi"
+                        >Member Introduction</a
+                      >
+                    </li>
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/patent"
+                        >Patent</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu_dropdown">
+                  <a
+                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
+                    href="/technology"
+                    ><span>TECHNOLOGY</span></a
+                  >
+                  <ul class="menu_dropdown-content">
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/technology"
+                        >Our Technology</a
+                      >
+                    </li>
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/pipeline"
+                        >Pipeline</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu_dropdown">
+                  <a
+                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
+                    href="/ace1"
+                    ><span>PORTFOLIO</span></a
+                  >
+                  <ul class="menu_dropdown-content">
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/ace1">ACE1</a>
+                    </li>
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/ace2">ACE2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu_dropdown">
+                  <a
+                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
+                    href="/news"
+                    ><span>NEWSROOM</span></a
+                  >
+                  <ul class="menu_dropdown-content">
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/news">News</a>
+                    </li>
+                    <li class="">
+                      <a class="uphover:bh_bg_color_main" href="/event"
+                        >Event</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="">
+                  <a
+                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
+                    href="/contact"
+                    ><span>CONTACT</span></a
                   >
                 </li>
               </ul>
@@ -326,10 +423,109 @@
       <header class="bh mobile_header_wrap">
         <div class="bh mobile_header_top bh_bg_color_white">
           <div class="bh mobile_logo">
-            <a href="/">LOGO</a>
+            <a href="https://ethicstem.kr/"> LOGO </a>
           </div>
+          <a
+            href="#"
+            onclick="handle_menu(event);"
+            class="mobile_menu_btn mobile_menu mobile_menu_act bh_layer_toggle"
+            data-target="bh_layer_m_menu"
+            ><i class="ri-menu-fill"></i
+          ></a>
         </div>
       </header>
+
+      <div class="mobile_menu bh bh_layer_m_menu bh_layer bh_layer_left">
+        <div class="bh bh_layer_content">
+          <div class="bh bh_layer_header bh_bd_color_t">
+            <span class="bh_title"></span>
+            <div class="bh bh_layer_close" onclick="handle_menu(event);">
+              <span>
+                <i class="ri-close-fill"></i>
+              </span>
+            </div>
+          </div>
+          <div class="bh bh_layer_body pd-0">
+            <nav class="bh mobile_main_menu">
+              <ul>
+                <li>
+                  <a class="bh" href="/overview"> ABOUT</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/overview">- Overview</a>
+                    </li>
+                    <li>
+                      <a href="/mission">- Mission</a>
+                    </li>
+                    <li>
+                      <a href="/leadership">- Leadership</a>
+                    </li>
+                    <li>
+                      <a href="/mi">- Member Introduction</a>
+                    </li>
+                    <li>
+                      <a href="/patent">- Patent</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/technology"> TECHNOLOGY</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/technology">- Our Technology</a>
+                    </li>
+                    <li>
+                      <a href="/pipeline">- Pipeline</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/ace1"> PORTFOLIO</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/ace1">- ACE1</a>
+                    </li>
+                    <li>
+                      <a href="/ace2">- ACE2</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/news"> NEWSROOM</a>
+                  <ul class="bh_toggle_content">
+                    <li>
+                      <a href="/news">- News</a>
+                    </li>
+                    <li>
+                      <a href="/event">- Event</a>
+                    </li>
+                  </ul>
+                  <div class="bh_toggle">
+                    <i class="bh_toggle_down xi-angle-down"></i>
+                    <i class="bh_toggle_up xi-angle-up"></i>
+                  </div>
+                </li>
+                <li>
+                  <a class="bh" href="/contact"> CONTACT</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="bh bh_layer_dimmed"></div>
+      </div>
 
       <div class="bh bh_layer_m_menu bh_layer bh_layer_left">
         <div class="bh bh_layer_content">
@@ -974,11 +1170,6 @@
       }
     </style>
 
-    <!-- ETC -->
-    <div id="rhymix_alert"></div>
-    <div id="rhymix_debug_panel"></div>
-    <div id="rhymix_debug_button"></div>
-
     <!-- BODY JS -->
     <script src="/files/cache/assets/minified/addons.autolink.autolink.min.js?t=1732589713"></script>
     <script src="/files/cache/assets/minified/addons.photoswipe.PhotoSwipe.photoswipe.min.js?t=1732589713"></script>
@@ -988,6 +1179,14 @@
     <script src="/files/cache/assets/minified/layouts.ethicstem.page.min.js?t=1732589713"></script>
 
     <script>
+      function handle_menu() {
+        if ($(".mobile_menu").hasClass("on")) {
+          $(".mobile_menu").removeClass("on");
+        } else {
+          $(".mobile_menu").addClass("on");
+        }
+      }
+
       function toggleDropdown(m = false) {
         let dropdown = m
           ? document.getElementById("m-dropdown")
@@ -1021,6 +1220,12 @@
 
       // 클릭 외부 감지하여 닫기
       document.addEventListener("click", function (event) {
+        const target = $(event.target);
+
+        if (target.hasClass("bh_layer_dimmed")) {
+          $(".mobile_menu").removeClass("on");
+        }
+
         let selector = document.querySelector(".language-selector");
         if (!selector.contains(event.target)) {
           document.getElementById("dropdown").style.display = "none";
