@@ -19,6 +19,8 @@
     <!-- TITLE -->
     <title>하이크로즈마</title>
 
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
     <!-- CSS -->
     <link
       rel="stylesheet"
@@ -57,6 +59,37 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <style>
+      .gagaga {
+        font-family: "Roboto", "Noto Sans Korean", "Apple SD Gothic Neo",
+          "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
+      }
+
+      .swiper-pagination {
+        display: none !important;
+      }
+
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      swiper-slide > img {
+        display: block;
+        width: 100%;
+        min-height: 350px;
+        object-fit: cover;
+        filter: brightness(50%);
+      }
+
       .sub_top_banner {
         height: 400px;
       }
@@ -124,10 +157,6 @@
         margin-right: 5px;
       }
 
-      .sub_overview .img_wrap {
-        width: 513px;
-      }
-
       .gutters-25 > .col,
       .gutters-25 > [class*="col-"] {
         padding: 0px !important;
@@ -141,7 +170,7 @@
     <style></style>
     <style>
       .sub_top_banner {
-        background-image: url("https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        /* background-image: url("https://cdn.imweb.me/thumbnail/20220127/0ae3e87cd93cf.jpg"); */
       }
     </style>
     <style type="text/css">
@@ -189,8 +218,8 @@
       <header class="header_wrap">
         <div class="header bh_wrap clearfix">
           <div class="bh_row ai-c">
-            <h1 class="logo col">
-              <a href="/" style="color: #fff">
+            <h1 class="flex items-center logo col">
+              <a href="/">
                 LOGO
                 <!-- <img
                       src="https://ethicstem.kr/files/attach/images/109/ff49987370efe721365e206172837023.png"
@@ -239,6 +268,7 @@
           </div>
         </div>
       </header>
+
       <header class="bh mobile_header_wrap">
         <div class="bh mobile_header_top bh_bg_color_white">
           <div class="bh mobile_logo">
@@ -246,6 +276,75 @@
           </div>
         </div>
       </header>
+
+      <div class="md:block hidden h-[100px]"></div>
+
+      <swiper-container
+        class="mySwiper md:!mb-24"
+        autoplay-delay="4000"
+        autoplay-disable-on-interaction="false"
+      >
+        <swiper-slide class="">
+          <img
+            class="md:!h-[500px]"
+            src="https://cdn.imweb.me/thumbnail/20220125/65d8fbc7df7a1.jpg"
+            alt=""
+          />
+          <div
+            class="md:border-2 absolute border-white bh_wrap clearfix h-[250px] flex flex-col justify-center"
+          >
+            <h3 class="md:text-[36px] text-[24px] text-white font-semibold">
+              PREMIUM SPA HAIR
+            </h3>
+            <br />
+            <p class="md:text-[20px] text-[16px] text-white">
+              DESC1...
+              <br />
+              DESC2...
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <img
+            class="md:!h-[500px]"
+            src="https://cdn.imweb.me/thumbnail/20220125/3bba5b002e47f.jpg"
+            alt=""
+          />
+          <div
+            class="md:border-2 absolute border-white bh_wrap clearfix h-[250px] flex flex-col justify-center"
+          >
+            <h3 class="md:text-[36px] text-[24px] text-white font-semibold">
+              PREMIUM SPA HAIR
+            </h3>
+            <br />
+            <p class="md:text-[20px] text-[16px] text-white">
+              DESC1...
+              <br />
+              DESC2...
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <img
+            class="md:!h-[500px]"
+            src="https://cdn.imweb.me/thumbnail/20220125/255c86715d364.jpg"
+            alt=""
+          />
+          <div
+            class="md:border-2 absolute border-white bh_wrap clearfix h-[250px] flex flex-col justify-center"
+          >
+            <h3 class="md:text-[36px] text-[24px] text-white font-semibold">
+              PREMIUM SPA HAIR
+            </h3>
+            <br />
+            <p class="md:text-[20px] text-[16px] text-white">
+              DESC1...
+              <br />
+              DESC2...
+            </p>
+          </div>
+        </swiper-slide>
+      </swiper-container>
 
       <div class="bh bh_layer_m_menu bh_layer bh_layer_left">
         <div class="bh bh_layer_content">
@@ -259,7 +358,7 @@
             <nav class="bh mobile_main_menu">
               <ul>
                 <li>
-                  <a class="bh" href="/overview"> ABOUT</a>
+                  <a class="bh gagaga" href="/overview"> ABOUT</a>
                   <ul class="bh_toggle_content">
                     <li>
                       <a href="/overview">- Overview</a>
@@ -336,99 +435,58 @@
         </div>
         <div class="bh bh_layer_dimmed"></div>
       </div>
-      <div class="body">
-        <div>
-          <div class="sub_top_banner clearfix">
-            <div class="sub_top_banner_content_wrap">
-              <div class="bh bh_row ai-c h-100 mg-0">
-                <div class="bh col-12">
-                  <span class="bh_color_white ts-1">HYCROSMA</span>
-                  <div
-                    class="hr-line bh_bg_color_white mt-10"
-                    style="height: 2px"
-                  >
-                    &nbsp;
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="content_wrap top_btn_css">
-          <div class="bh_wrap clearfix">
-            <div class="content clearfix" id="content">
+      <main class="body p-6">
+        <div class="content_wrap top_btn_css !m-0 mt-0">
+          <div class="bh_wrap clearfix" style="padding: 0px !important">
+            <div>
               <div class="content_inner clearfix">
                 <div
                   class="xe-widget-wrapper"
                   style="float: left; width: 100%; margin: none; padding: none"
                 >
                   <div style="padding: 0px 0px 0px 0px !important">
-                    <div class="bh bh_page_widget_wrap">
+                    <div class="bh">
                       <div class="bh bh_page_widget_inner">
                         <div class="sub_overview">
-                          <!-- <div
-                            class="sub_title"
-                            data-anim-delay="0"
-                            data-anim-type="fade-in-up"
+                          <h2
+                            class="gagaga md:text-[32px] text-[24px] font-bold !mb-4"
                           >
-                            Overview
-                          </div> -->
-                          <div
-                            class="ta-c lg:mb-50 mb-30"
-                            data-anim-delay="0"
-                            data-anim-type="fade-in-up"
-                          >
-                            <div class="lg:fs-36 fs-24 fw-b">
-                              프리미엄 피부 관리, 그리고 자연과 조화를 이루는
-                              동양의 전통문화와 예술이 결합된 새로운 개념의
-                              <br /><span style="color: #e7b249"
-                                >헤드스파 브랜드입니다</span
-                              >
-                            </div>
-                          </div>
-                          <div class="bh_row gutters-25">
+                            ABOUT
+                          </h2>
+                          <div>
                             <div
-                              class="lg:col col-12"
-                              style="margin-right: 12px"
+                              class="md:flex-row flex flex-col-reverse !p-0"
                               data-anim-delay="0"
                               data-anim-type="fade-in-right"
                             >
-                              <div class="ta-c">
-                                <div class="text_wrap mt-20">
-                                  <div class="lg:fs-24 fs-20">
-                                    HYCROSMA는 메디컬 에스테틱 수준의 자체
-                                    <br class="lg:ds-b ds-n" />
-                                    독자개발의 첨단 기술 장비 를 개발했습니다
-                                  </div>
-                                  <div class="text_line"></div>
-                                </div>
-                                <div class="text_wrap mt-30">
-                                  <div class="fs-18 fw-m">
-                                    이를 통해 각막내피부전증 환자에게 기존의
-                                    각막이식보다 <br class="lg:ds-b ds-n" />
-                                    쉽고 신속하게 치료할 수 있는 세포이식
-                                    치료법을 제안합니다. <br />
-                                    현재 임상 시험 준비 중인 Ethicstem은
-                                    줄기세포 유래 각막내피세포 치료제를
-                                    상용화하고, <br class="lg:ds-b ds-n" />
-                                    각막 질환 환자들에게 보다 나은 치료 옵션을
-                                    제공하는 것을 목표로 하고 있습니다.
-                                  </div>
-                                  <div class="text_line"></div>
+                              <div
+                                class="md:w-1/2"
+                                data-anim-delay="0"
+                                data-anim-type="fade-in-left"
+                              >
+                                <div class="w-full">
+                                  <img
+                                    src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="img"
+                                  />
                                 </div>
                               </div>
-                            </div>
-                            <div
-                              class="lg:col-auto col-12 lg:mt-0 mt-50"
-                              data-anim-delay="0"
-                              data-anim-type="fade-in-left"
-                            >
-                              <div class="img_wrap">
-                                <img
-                                  src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                  alt="img"
-                                />
+                              <div
+                                class="md:w-1/2 md:ml-30 mb-6 flex flex-col justify-center"
+                              >
+                                <div class="text_wrap mt-20">
+                                  <div class="lg:fs-24 fs-20">DESC</div>
+                                </div>
+                                <div class="text_wrap">
+                                  <p>
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Sint et doloribus
+                                    distinctio soluta laudantium, possimus harum
+                                    ad vero officiis eligendi, beatae odio
+                                    perspiciatis nostrum corrupti cum ea
+                                    voluptatibus, omnis magnam!
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -441,12 +499,193 @@
             </div>
           </div>
         </div>
+
+        <style>
+          .vision {
+            position: relative;
+            padding-top: 70px;
+            width: 273px;
+            height: 256px;
+            text-align: center;
+            background: url("https://hwam.co.kr/resources/kr/images/company/vision_sec2_img1.png")
+              no-repeat center;
+            box-sizing: border-box;
+          }
+
+          .vision dt {
+            margin-bottom: 17px;
+            font-size: 25px;
+            font-weight: 700;
+            color: #f27321;
+            line-height: 1;
+          }
+        </style>
+
+        <div class="content_wrap top_btn_css !m-0">
+          <div
+            class="bh_wrap clearfix md:mt-24 md:!mb-24"
+            style="padding: 0px !important"
+          >
+            <div>
+              <div class="content_inner clearfix">
+                <div
+                  class="xe-widget-wrapper"
+                  style="float: left; width: 100%; margin: none; padding: none"
+                >
+                  <div style="padding: 0px 0px 0px 0px !important">
+                    <div class="bh">
+                      <div class="bh bh_page_widget_inner">
+                        <div class="sub_overview">
+                          <div
+                            class="md:flex-row flex flex-col justify-between items-center"
+                          >
+                            <div
+                              class="md:flex-row flex flex-col !p-0"
+                              data-anim-delay="0"
+                              data-anim-type="fade-in-right"
+                            >
+                              <li
+                                class="!mt-24 vision flex flex-col items-center justify-center"
+                              >
+                                <dl>
+                                  <dt class="eng">Be Greener</dt>
+                                  <dd>DESC</dd>
+                                </dl>
+                              </li>
+                            </div>
+                            <div
+                              class="md:flex-row flex flex-col !p-0"
+                              data-anim-delay="0"
+                              data-anim-type="fade-in-right"
+                            >
+                              <li
+                                class="!mt-24 vision flex flex-col items-center justify-center"
+                              >
+                                <dl>
+                                  <dt class="eng">Be Lighter</dt>
+                                  <dd>DESC</dd>
+                                </dl>
+                              </li>
+                            </div>
+                            <div
+                              class="md:flex-row flex flex-col !p-0"
+                              data-anim-delay="0"
+                              data-anim-type="fade-in-right"
+                            >
+                              <li
+                                class="!mt-24 vision flex flex-col items-center justify-center"
+                              >
+                                <dl>
+                                  <dt class="eng">Be More</dt>
+                                  <dd>DESC</dd>
+                                </dl>
+                              </li>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:mt-24 md:!mb-24 content_wrap top_btn_css !m-0">
+          <div class="bh_wrap clearfix" style="padding: 0px !important">
+            <div>
+              <div class="content_inner clearfix">
+                <div
+                  class="xe-widget-wrapper"
+                  style="float: left; width: 100%; margin: none; padding: none"
+                >
+                  <div style="padding: 0px 0px 0px 0px !important">
+                    <div class="bh">
+                      <div class="md:mt-14 bh bh_page_widget_inner mt-36">
+                        <div class="sub_overview">
+                          <h2
+                            class="md:text-[32px] text-[24px] font-bold !mb-4 !mt-14"
+                          >
+                            PRODUCTS
+                          </h2>
+                          <div>
+                            <div
+                              class="md:flex-row flex flex-col !p-0"
+                              data-anim-delay="0"
+                              data-anim-type="fade-in-right"
+                            >
+                              <div class="mr-4">
+                                <img
+                                  src="./images/item-1.jpeg"
+                                  alt="사업아이템-1"
+                                />
+                                <button
+                                  class="w-full border !mt-4 !p-2"
+                                  style="border-color: rgba(33, 33, 33, 0.2)"
+                                  type="button"
+                                >
+                                  DESC..
+                                </button>
+                              </div>
+
+                              <div class="mr-4">
+                                <img
+                                  src="./images/item-2.jpeg"
+                                  alt="사업아이템-2"
+                                />
+                                <button
+                                  class="w-full border !mt-4 !mb-4 !p-2"
+                                  style="border-color: rgba(33, 33, 33, 0.2)"
+                                  type="button"
+                                >
+                                  DESC..
+                                </button>
+                              </div>
+                              <div class="mr-4">
+                                <img
+                                  src="./images/item-5.jpeg"
+                                  alt="사업아이템-5"
+                                />
+                                <button
+                                  class="w-full border !mt-4 !mb-4 !p-2"
+                                  style="border-color: rgba(33, 33, 33, 0.2)"
+                                  type="button"
+                                >
+                                  DESC..
+                                </button>
+                              </div>
+                              <div class="mr-4">
+                                <img
+                                  src="./images/item-4.jpeg"
+                                  alt="사업아이템-4"
+                                />
+                                <button
+                                  class="w-full border !mt-4 !mb-4 !p-2"
+                                  style="border-color: rgba(33, 33, 33, 0.2)"
+                                  type="button"
+                                >
+                                  DESC..
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="scrollTop_wrap">
           <a class="scrollTop bh_bg_color_white" href="#"
             ><i class="ri-arrow-up-s-line"></i><span>TOP</span></a
           >
         </div>
-      </div>
+      </main>
       <footer class="bh dark_no">
         <div class="footer style_white">
           <div class="bh_wrap">
@@ -483,6 +722,7 @@
     <script src="https://ethicstem.kr/files/cache/assets/minified/addons.photoswipe.rx_photoswipe.min.js?t=1732589713"></script>
     <script src="https://ethicstem.kr/files/cache/assets/minified/layouts.ethicstem.layout.min.js?t=1732589713"></script>
     <script src="https://ethicstem.kr/files/cache/assets/minified/layouts.ethicstem.page.min.js?t=1732589713"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <script>
       function toggleDropdown(m = false) {
