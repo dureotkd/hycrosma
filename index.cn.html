@@ -232,24 +232,24 @@
 
             <div class="language-selector">
               <div class="selected-lang" onclick="toggleDropdown()">
-                <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
-                <span id="selected-text">ko</span>
+                <img src="https://flagcdn.com/w40/cn.png" alt="cn Flag" />
+                <span id="selected-text">cn</span>
                 <i class="ri-arrow-down-s-line"></i>
               </div>
               <div class="dropdown" id="dropdown">
                 <div
                   class="en"
-                  onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png')"
+                  onclick="changeLanguage('', 'https://flagcdn.com/w40/us.png')"
                 >
-                  <img src="https://flagcdn.com/w40/us.png" alt="US Flag" />
-                  en
+                  <img src="https://flagcdn.com/w40/kr.png" alt="US Flag" />
+                  ko
                 </div>
                 <div
-                  class="cn"
-                  onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png')"
+                  class="us"
+                  onclick="changeLanguage('us', 'https://flagcdn.com/w40/us.png')"
                 >
-                  <img src="https://flagcdn.com/w40/cn.png" alt="CN Flag" />
-                  cn
+                  <img src="https://flagcdn.com/w40/us.png" alt="us Flag" />
+                  us
                 </div>
               </div>
             </div>
@@ -274,13 +274,12 @@
           <div
             class="absolute border-white bh_wrap clearfix h-[250px] flex flex-col justify-center"
           >
-            <h3 class="md:text-[36px] text-[24px] text-white">
-              MEDICAL AESTHETIC
-            </h3>
+            <h3 class="md:text-[36px] text-[24px] text-white">医学美容</h3>
             <br />
             <p class="md:text-[20px] text-[16px] text-white">
-              현대인의 피부 건강을 위한 맞춤형 솔루션을 제공하여,<br />
-              건강한 아름다움을 실현하는 글로벌 뷰티 브랜드
+              提供现代人皮肤健康的定制化解决方案，
+              <br />
+              实现健康美丽的全球美容品牌。
             </p>
           </div>
         </swiper-slide>
@@ -424,9 +423,9 @@
             alt=""
           />
 
-          <span class="text-[16px] mt-4" style="color: silver">About us</span>
+          <span class="text-[16px] mt-4" style="color: silver">关于我们</span>
 
-          <h4 class="text-[21px] text-black">HYCROSMA</h4>
+          <h4 class="text-[21px] text-black">产品</h4>
 
           <div class="w-[46px] h-[2px] bg-black mt-6"></div>
         </a>
@@ -441,8 +440,7 @@
           />
 
           <span class="text-silver200 text-[16px] opacity-0 mt-4">.</span>
-
-          <h4 class="text-[21px] text-black">PRODUCT</h4>
+          <h4 class="text-[21px] text-black">产品</h4>
 
           <div class="w-[46px] h-[2px] bg-black mt-6"></div>
         </a>
@@ -456,9 +454,9 @@
             alt=""
           />
 
-          <span class="text-[16px] mt-4" style="color: silver">Contact us</span>
+          <span class="text-[16px] mt-4" style="color: silver">联系我们</span>
 
-          <h4 class="text-[21px] text-black">찾아오시는길</h4>
+          <h4 class="text-[21px] text-black">地点</h4>
 
           <div class="w-[46px] h-[2px] bg-black mt-6"></div>
         </a>
@@ -512,7 +510,12 @@
       }
 
       function changeLanguage(lang, flagUrl, m = false) {
-        window.location.href = `${window.location.origin}/index.${lang}`;
+        if (lang) {
+          window.location.href = `${window.location.origin}/index.${lang}`;
+        } else {
+          window.location.href = "/";
+        }
+
         // const prevTxt = document.getElementById("selected-text").innerText;
         // const prevFlag = document.querySelector(".selected-lang img").src;
 
