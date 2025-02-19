@@ -87,7 +87,7 @@
         width: 100%;
         min-height: 350px;
         object-fit: cover;
-        filter: brightness(50%);
+        filter: brightness(70%);
       }
 
       .sub_top_banner {
@@ -128,6 +128,14 @@
         border-radius: 5px;
         background: white;
       }
+
+      .card-1 {
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        background: #fff;
+        border-radius: 2px;
+        position: relative;
+      }
+
       .dropdown,
       .m-dropdown {
         display: none;
@@ -272,25 +280,26 @@
       <header class="bh mobile_header_wrap">
         <div class="bh mobile_header_top bh_bg_color_white">
           <div class="bh mobile_logo">
-            <a href="/">LOGO</a>
+            <a href="/">HYCROSMA</a>
           </div>
         </div>
       </header>
 
       <div class="md:block hidden h-[100px]"></div>
 
-      <swiper-container class="mySwiper md:!mb-24">
+      <swiper-container class="mySwiper">
         <swiper-slide class="">
+          <!-- <img class="md:!h-[500px]" src="./images/ea.jpg" alt="" /> -->
           <img
             class="md:!h-[500px]"
-            src="https://cdn.imweb.me/thumbnail/20220125/65d8fbc7df7a1.jpg"
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
           <div
-            class="md:border-2 absolute border-white bh_wrap clearfix h-[250px] flex flex-col justify-center"
+            class="absolute border-white bh_wrap clearfix h-[250px] flex flex-col justify-center"
           >
-            <h3 class="md:text-[36px] text-[24px] text-white font-semibold">
-              PREMIUM CLINIC
+            <h3 class="md:text-[36px] text-[24px] text-white">
+              MEDICAL AESTHETIC
             </h3>
             <br />
             <p class="md:text-[20px] text-[16px] text-white">
@@ -428,269 +437,52 @@
         </div>
         <div class="bh bh_layer_dimmed"></div>
       </div>
-      <main class="body p-6">
-        <div class="content_wrap top_btn_css !m-0 mt-0">
-          <div class="bh_wrap clearfix" style="padding: 0px !important">
-            <div>
-              <div class="content_inner clearfix">
-                <div
-                  class="xe-widget-wrapper"
-                  style="float: left; width: 100%; margin: none; padding: none"
-                >
-                  <div style="padding: 0px 0px 0px 0px !important">
-                    <div class="bh">
-                      <div class="bh bh_page_widget_inner">
-                        <div class="sub_overview">
-                          <div>
-                            <div
-                              class="md:flex-row flex flex-col-reverse !p-0"
-                              data-anim-delay="0"
-                              data-anim-type="fade-in-right"
-                            >
-                              <div
-                                class="md:w-1/2"
-                                data-anim-delay="0"
-                                data-anim-type="fade-in-left"
-                              >
-                                <div class="w-full">
-                                  <img
-                                    src="https://images.unsplash.com/photo-1576426863848-c21f53c60b19?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="img"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                class="md:w-1/2 md:ml-30 mb-6 flex flex-col justify-center"
-                              >
-                                <div
-                                  class="text_wrap mt-20 border-black border-b-1 mb-4"
-                                >
-                                  <div class="lg:fs-24 fs-20">회사소개</div>
-                                </div>
-                                <div class="text_wrap">
-                                  <p>
-                                    하이크로즈마는 메디컬 에스테틱 수준의 자체
-                                    독자개발의 첨단 기술 장비가 결합된
-                                    <span style="color: #f27321"
-                                      >프리미엄 피부 관리</span
-                                    >, 그리고 자연과 조화를 이루는 동양의
-                                    전통문화와 예술이 결합된 새로운 개념의
-                                    헤드스파 브랜드입니다. 최상의 품질과
-                                    차별화된 서비스를 통해 고객의
-                                    <span>
-                                      피부 건강과 마음 치유 , 아름다움을
-                                      극대화하는 것을 목표로 합니다.
-                                    </span>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <main class="flex-col flex max-w-[900px] m-auto mb-6">
+        <div
+          class="w-full mt-12 border-b-2 pb-4"
+          style="border-bottom-color: #ddd"
+        >
+          <h2 class="text-center text-[22px]">Product</h2>
         </div>
 
-        <style>
-          .vision {
-            position: relative;
-            padding-top: 70px;
-            width: 273px;
-            height: 256px;
-            text-align: center;
-            background: url("https://hwam.co.kr/resources/kr/images/company/vision_sec2_img1.png")
-              no-repeat center;
-            box-sizing: border-box;
-          }
+        <img class="mt-8" src="./images/product-desc.webp" alt="" />
 
-          .vision dt {
-            margin-bottom: 17px;
-            font-size: 25px;
-            font-weight: 700;
-            color: #f27321;
-            line-height: 1;
-          }
-        </style>
-
-        <div class="content_wrap top_btn_css !m-0">
-          <div
-            class="bh_wrap clearfix md:mt-24 md:!mb-24"
-            style="padding: 0px !important"
-          >
-            <div>
-              <div class="content_inner clearfix">
-                <div
-                  class="xe-widget-wrapper"
-                  style="float: left; width: 100%; margin: none; padding: none"
-                >
-                  <div style="padding: 0px 0px 0px 0px !important">
-                    <div class="bh">
-                      <div class="bh bh_page_widget_inner">
-                        <div class="sub_overview">
-                          <div
-                            class="md:flex-row flex flex-col justify-between items-center"
-                          >
-                            <div
-                              class="md:flex-row flex flex-col !p-0"
-                              data-anim-delay="0"
-                              data-anim-type="fade-in-right"
-                            >
-                              <li
-                                class="!mt-12 vision flex flex-col items-center justify-center"
-                              >
-                                <dl>
-                                  <dt class="eng">Be Greener</dt>
-                                  <dd>
-                                    메디컬 에스테틱 수준의 <br />
-                                    전문적인 피부 관리 시스템
-                                  </dd>
-                                </dl>
-                              </li>
-                            </div>
-                            <div
-                              class="md:flex-row flex flex-col !p-0"
-                              data-anim-delay="0"
-                              data-anim-type="fade-in-right"
-                            >
-                              <li
-                                class="!mt-12 vision flex flex-col items-center justify-center"
-                              >
-                                <dl>
-                                  <dt class="eng">Be Lighter</dt>
-                                  <dd>
-                                    첨단 기술 장비를 활용한<br />
-                                    혁신적인 뷰티 케어
-                                  </dd>
-                                </dl>
-                              </li>
-                            </div>
-                            <div
-                              class="md:flex-row flex flex-col !p-0"
-                              data-anim-delay="0"
-                              data-anim-type="fade-in-right"
-                            >
-                              <li
-                                class="!mt-12 vision flex flex-col items-center justify-center"
-                              >
-                                <dl>
-                                  <dt class="eng">Be More</dt>
-                                  <dd>
-                                    고객 중심의 맞춤형 케어와 <br />
-                                    지속 가능한 피부 솔루션
-                                  </dd>
-                                </dl>
-                              </li>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="md:mt-24 md:!mb-24 content_wrap top_btn_css !m-0">
-          <div class="bh_wrap clearfix" style="padding: 0px !important">
-            <div>
-              <div class="content_inner clearfix">
-                <div
-                  class="xe-widget-wrapper"
-                  style="float: left; width: 100%; margin: none; padding: none"
-                >
-                  <div style="padding: 0px 0px 0px 0px !important">
-                    <div class="bh">
-                      <div class="md:mt-14 bh bh_page_widget_inner mt-36">
-                        <div class="sub_overview">
-                          <h2
-                            class="md:text-[32px] text-[24px] border-b-1 lg:fs-24 fs-20 !mb-4 !mt-14"
-                          >
-                            최첨단 자체개발 독자 기술
-                          </h2>
-                          <div>
-                            <div
-                              class="md:flex-row flex flex-col !p-0"
-                              data-anim-delay="0"
-                              data-anim-type="fade-in-right"
-                            >
-                              <div class="mr-4">
-                                <img
-                                  src="./images/item-1.jpeg"
-                                  alt="사업아이템-1"
-                                />
-                                <button
-                                  class="w-full border !mt-4 !mb-4 !p-2"
-                                  style="border-color: rgba(33, 33, 33, 0.2)"
-                                  type="button"
-                                >
-                                  멀티 플라즈마
-                                </button>
-                              </div>
-
-                              <div class="mr-4">
-                                <img
-                                  src="./images/item-2.jpeg"
-                                  alt="사업아이템-2"
-                                />
-                                <button
-                                  class="w-full border !mt-4 !mb-4 !p-2"
-                                  style="border-color: rgba(33, 33, 33, 0.2)"
-                                  type="button"
-                                >
-                                  초음파 & 고주파
-                                </button>
-                              </div>
-                              <div class="mr-4">
-                                <img
-                                  src="./images/item-5.jpeg"
-                                  alt="사업아이템-5"
-                                />
-                                <button
-                                  class="w-full border !mt-4 !mb-4 !p-2"
-                                  style="border-color: rgba(33, 33, 33, 0.2)"
-                                  type="button"
-                                >
-                                  미백토닝 레이저
-                                </button>
-                              </div>
-                              <div class="mr-4">
-                                <img
-                                  src="./images/item-4.jpeg"
-                                  alt="사업아이템-4"
-                                />
-                                <button
-                                  class="w-full border !mt-4 !mb-4 !p-2"
-                                  style="border-color: rgba(33, 33, 33, 0.2)"
-                                  type="button"
-                                >
-                                  오투덤 산소테라피
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="scrollTop_wrap">
-          <a class="scrollTop bh_bg_color_white" href="#"
-            ><i class="ri-arrow-up-s-line"></i><span>TOP</span></a
-          >
+        <div class="p-4 text-[14px] mt-4">
+          콜드플라즈마와 아르곤가스 플라즈마의 결합으로 된 최첨단 플라즈마 뷰티
+          장비. 1. 의료 및 살균: • 박테리아, 바이러스, 곰팡이 제거에
+          효과적입니다. • 상처 소독 및 치과 치료에 사용됩니다. 아르곤 가스를
+          이온화해 생성한 플라즈마입니다. • 전자와 이온이 풍부하며, 매우
+          안정적인 특성을 가지고 있습니다. • 고온 및 저온(콜드) 형태 모두
+          가능합니다. 다양한 복합문제의 피부질환을 개선할 수 있습니다.
         </div>
       </main>
+      <!-- <footer class="bh dark_no">
+        <div class="footer style_white">
+          <div class="bh_wrap">
+            <div class="bh_row no-gutters ai-c">
+              <div class="footer_logo ds-n lg:ds-b">로고</div>
+              <div class="lg:col col-12">
+                <div class="copyright col">
+                  <div class="fs-16 bh_color_white">
+                    <span>상호명 : 하이크로즈마</span
+                    ><span class="m-after">대표 : -</span
+                    ><br class="lg:ds-n ds-b" />
+                    <span class="no-after">FAX : 1111-111-1111</span><br />
+                    <span class="m-after">EMAIL : 111111@hanmail.net</span
+                    ><br class="lg:ds-n ds-b" />
+                    <span class="no-after">사업자 등록번호 : 111-11-11111</span
+                    ><br />
+                    <span class="no-after">주소 : ...</span>
+                  </div>
+                  <p class="fs-16 bh_color_gray_500 mt-20">
+                    Copyright 2024. 하이크로즈마 Co. All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer> -->
     </div>
 
     <!-- BODY JS -->
