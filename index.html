@@ -512,7 +512,11 @@
       }
 
       function changeLanguage(lang, flagUrl, m = false) {
-        window.location.href = `${window.location.origin}/index.${lang}`;
+        if (lang) {
+          window.location.href = `${window.location.origin}/highcrosma/index.${lang}`;
+        } else {
+          window.location.href = "/highcrosma";
+        }
         // const prevTxt = document.getElementById("selected-text").innerText;
         // const prevFlag = document.querySelector(".selected-lang img").src;
 

@@ -243,7 +243,7 @@
                   <a
                     class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
                     style="text-decoration: underline"
-                    href="/company.html"
+                    href="/highcrosma/company"
                     ><span>회사소개</span></a
                   >
                 </li>
@@ -445,24 +445,27 @@
           <h2 class="text-center text-[22px]">Contract us</h2>
         </div>
 
-        <div class="pl-[12px] pr-[12px] text-[14px] mt-4">
+        <div class="pl-[12px] pr-[12px] text-[14px] mt-4 translation">
           <p>
-            <span> 이메일<br /> </span>
+            <span data-i18n="A:email"> 이메일</span>
+            <br />
             <span>christine@hycrosma.com</span>
           </p>
           <p class="!mt-4">
-            <span> 주소 </span>
+            <span data-i18n="A:address"> 주소 </span>
             <br />
             <span>
               Flat 2, 160B Dalston Lane London, E8 1NG United Kingdom
             </span>
           </p>
           <p class="!mt-4">
-            <span> Instagram <br /> </span>
+            <span> Instagram</span>
+            <br />
             <span> hycrosma.official </span>
           </p>
           <p class="!mt-4">
-            <span> 연락처 <br /> </span>
+            <span data-i18n="A:phone"> 연락처 </span>
+            <br />
             <span>
               +44 7418 633159 <br />
               +447383997290
@@ -507,7 +510,57 @@
     <script src="https://ethicstem.kr/files/cache/assets/minified/layouts.ethicstem.layout.min.js?t=1732589713"></script>
     <script src="https://ethicstem.kr/files/cache/assets/minified/layouts.ethicstem.page.min.js?t=1732589713"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.4.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/i18next/1.9.0/i18next.min.js"
+      type="text/javascript"
+    ></script>
 
+    <script type="text/javascript">
+      $.i18n.init(
+        {
+          //lng: 'en-US',
+          lng: "ko-KR",
+          debug: true,
+          useLocalStorage: false,
+          localStorageExpirationTime: 86400000, // in ms, default 1 week
+          ns: {
+            namespaces: ["A", "B"],
+            defaultNs: "A",
+          },
+          //resGetPath: 'js/locales/translation.json'
+          resStore: {
+            en: {
+              A: {
+                email: "Email",
+                address: "Address",
+                phone: "Contract",
+              },
+            },
+            ko: {
+              A: {
+                email: "이메일",
+                address: "주소",
+                phone: "연락처",
+              },
+            },
+            cn: {
+              A: {
+                email: "电子邮件",
+                address: "地址",
+                phone: "联系方式",
+              },
+            },
+          },
+        },
+        function () {
+          $(".translation").i18n();
+        }
+      );
+    </script>
     <script>
       function toggleDropdown(m = false) {
         let dropdown = m
@@ -533,11 +586,10 @@
         document.getElementById("selected-text").innerText = lang;
         document.querySelector(".selected-lang img").src = flagUrl;
 
-        const googleTranslateSelect = document.querySelector(".goog-te-combo");
-        googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
-        googleTranslateSelect.dispatchEvent(new Event("change"));
-
         toggleDropdown(m);
+
+        $.i18n.setLng(lang);
+        $(".translation").i18n();
       }
 
       // 클릭 외부 감지하여 닫기

@@ -237,19 +237,6 @@
               </a>
             </h1>
 
-            <nav class="main_menu menu_wrap col-auto" id="main_menu">
-              <ul class="bh_wrap">
-                <li class="menu_dropdown">
-                  <a
-                    class="hover:bh_color_main active:bh_color_main after:bh_bg_color_main"
-                    style="text-decoration: underline"
-                    href="/company.html"
-                    ><span>회사소개</span></a
-                  >
-                </li>
-              </ul>
-            </nav>
-
             <div class="language-selector">
               <div class="selected-lang" onclick="toggleDropdown()">
                 <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
@@ -285,7 +272,7 @@
         </div>
       </header>
 
-      <div class="md:block hidden h-[100px]"></div>
+      <div class="md:block hidden h-[80px]"></div>
 
       <swiper-container class="mySwiper">
         <swiper-slide class="">
@@ -544,26 +531,11 @@
       }
 
       function changeLanguage(lang, flagUrl, m = false) {
-        const prevTxt = document.getElementById("selected-text").innerText;
-        const prevFlag = document.querySelector(".selected-lang img").src;
-
-        document.querySelector(`.dropdown > .${lang}`).remove();
-
-        const langDiv = document.createElement("div");
-        langDiv.className = prevTxt;
-        langDiv.onclick = () => changeLanguage(prevTxt, prevFlag);
-
-        langDiv.innerHTML = `<img class="${prevTxt}" src="${prevFlag}" > ${prevTxt}`;
-        document.getElementById("dropdown").appendChild(langDiv);
-
-        document.getElementById("selected-text").innerText = lang;
-        document.querySelector(".selected-lang img").src = flagUrl;
-
-        const googleTranslateSelect = document.querySelector(".goog-te-combo");
-        googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
-        googleTranslateSelect.dispatchEvent(new Event("change"));
-
-        toggleDropdown(m);
+        if (lang) {
+          window.location.href = `${window.location.origin}/highcrosma/product.${lang}`;
+        } else {
+          window.location.href = "/highcrosma/product";
+        }
       }
 
       // 클릭 외부 감지하여 닫기
