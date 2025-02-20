@@ -258,9 +258,33 @@
       </header>
 
       <header class="bh mobile_header_wrap">
-        <div class="bh mobile_header_top bh_bg_color_white">
-          <div class="bh mobile_logo">
-            <a href="/">HYCROSMA</a>
+        <div
+          class="bh mobile_header_top bh_bg_color_white flex items-center justify-between"
+        >
+          <a class="text-[19px] ml-6" href="/">HYCROSMA</a>
+
+          <div class="language-selector mr-6">
+            <div class="selected-lang" onclick="toggleDropdown()">
+              <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
+              <span id="selected-text">ko</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+            <div class="dropdown" id="dropdown">
+              <div
+                class="en"
+                onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png')"
+              >
+                <img src="https://flagcdn.com/w40/us.png" alt="US Flag" />
+                en
+              </div>
+              <div
+                class="cn"
+                onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png')"
+              >
+                <img src="https://flagcdn.com/w40/cn.png" alt="CN Flag" />
+                cn
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -503,17 +527,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.15/i18next.min.js"></script>
 
     <script>
-      // const atags = document.querySelectorAll("a");
-      // const lang = window.localStorage.getItem("lang") || "index";
+      document.addEventListener("DOMContentLoaded", function () {
+        const lang = window.localStorage.getItem("lang");
 
-      // atags.forEach((a) => {
-      //   a.addEventListener("click", (e) => {
-      //     e.preventDefault();
+        console.log(lang);
 
-      //     const href = a.getAttribute("href");
-      //     window.href = "/hycrosma/" + lang;
-      //   });
-      // });
+        if (!lang) return;
+
+        // 모든 a 태그를 순회하면서 href 값 수정
+        document.querySelectorAll("main > a").forEach((anchor) => {
+          let href = anchor.getAttribute("href");
+
+          anchor.setAttribute("href", `${href}.${lang}`);
+        });
+      });
     </script>
 
     <script>
@@ -527,30 +554,11 @@
 
       function changeLanguage(lang, flagUrl, m = false) {
         if (lang) {
+          window.localStorage.setItem("lang", lang);
           window.location.href = `${window.location.origin}/hycrosma/index.${lang}`;
         } else {
           window.location.href = "/hycrosma";
         }
-        // const prevTxt = document.getElementById("selected-text").innerText;
-        // const prevFlag = document.querySelector(".selected-lang img").src;
-
-        // document.querySelector(`.dropdown > .${lang}`).remove();
-
-        // const langDiv = document.createElement("div");
-        // langDiv.className = prevTxt;
-        // langDiv.onclick = () => changeLanguage(prevTxt, prevFlag);
-
-        // langDiv.innerHTML = `<img class="${prevTxt}" src="${prevFlag}" > ${prevTxt}`;
-        // document.getElementById("dropdown").appendChild(langDiv);
-
-        // document.getElementById("selected-text").innerText = lang;
-        // document.querySelector(".selected-lang img").src = flagUrl;
-
-        // const googleTranslateSelect = document.querySelector(".goog-te-combo");
-        // googleTranslateSelect.value = lang === "cn" ? "zh-CN" : lang;
-        // googleTranslateSelect.dispatchEvent(new Event("change"));
-
-        // toggleDropdown(m);
       }
 
       // 클릭 외부 감지하여 닫기

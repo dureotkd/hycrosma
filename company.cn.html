@@ -263,9 +263,33 @@
       </header>
 
       <header class="bh mobile_header_wrap">
-        <div class="bh mobile_header_top bh_bg_color_white">
-          <div class="bh mobile_logo">
-            <a href="/">HYCROSMA</a>
+        <div
+          class="bh mobile_header_top bh_bg_color_white flex items-center justify-between"
+        >
+          <a class="text-[19px] ml-6" href="/">HYCROSMA</a>
+
+          <div class="language-selector mr-6">
+            <div class="selected-lang" onclick="toggleDropdown()">
+              <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
+              <span id="selected-text">ko</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+            <div class="dropdown" id="dropdown">
+              <div
+                class="en"
+                onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png')"
+              >
+                <img src="https://flagcdn.com/w40/us.png" alt="US Flag" />
+                en
+              </div>
+              <div
+                class="cn"
+                onclick="changeLanguage('cn', 'https://flagcdn.com/w40/cn.png')"
+              >
+                <img src="https://flagcdn.com/w40/cn.png" alt="CN Flag" />
+                cn
+              </div>
+            </div>
           </div>
         </div>
       </header>
