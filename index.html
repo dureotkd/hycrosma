@@ -220,7 +220,7 @@
         <div class="header bh_wrap clearfix">
           <div class="bh_row ai-c">
             <h1 class="flex items-center logo col">
-              <a href="/highcrosma">
+              <a href="/hycrosma">
                 HYCROSMA
                 <!-- <img
                       src="https://ethicstem.kr/files/attach/images/109/ff49987370efe721365e206172837023.png"
@@ -415,7 +415,7 @@
       </div>
       <main class="flex-row flex max-w-[900px] m-auto mb-6">
         <a
-          href="/highcrosma/company"
+          href="/hycrosma/company"
           class="w-1/3 md:ml-6 card-1 pb-12 flex flex-col items-center mr-4 cursor-pointer"
         >
           <img
@@ -431,7 +431,7 @@
           <div class="w-[46px] h-[2px] bg-black mt-6"></div>
         </a>
         <a
-          href="/highcrosma/product"
+          href="/hycrosma/product"
           class="w-1/3 card-1 pb-12 flex flex-col items-center mr-4"
         >
           <img
@@ -447,7 +447,7 @@
           <div class="w-[46px] h-[2px] bg-black mt-6"></div>
         </a>
         <a
-          href="/highcrosma/contract"
+          href="/hycrosma/contract"
           class="w-1/3 card-1 pb-12 flex flex-col items-center cursor-pointer"
         >
           <img
@@ -503,6 +503,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.15/i18next.min.js"></script>
 
     <script>
+      // const atags = document.querySelectorAll("a");
+      // const lang = window.localStorage.getItem("lang") || "index";
+
+      // atags.forEach((a) => {
+      //   a.addEventListener("click", (e) => {
+      //     e.preventDefault();
+
+      //     const href = a.getAttribute("href");
+      //     window.href = "/hycrosma/" + lang;
+      //   });
+      // });
+    </script>
+
+    <script>
       function toggleDropdown(m = false) {
         let dropdown = m
           ? document.getElementById("m-dropdown")
@@ -513,9 +527,9 @@
 
       function changeLanguage(lang, flagUrl, m = false) {
         if (lang) {
-          window.location.href = `${window.location.origin}/highcrosma/index.${lang}`;
+          window.location.href = `${window.location.origin}/hycrosma/index.${lang}`;
         } else {
-          window.location.href = "/highcrosma";
+          window.location.href = "/hycrosma";
         }
         // const prevTxt = document.getElementById("selected-text").innerText;
         // const prevFlag = document.querySelector(".selected-lang img").src;
