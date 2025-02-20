@@ -264,12 +264,12 @@
           <a class="text-[19px] ml-6" href="/">HYCROSMA</a>
 
           <div class="language-selector mr-6">
-            <div class="selected-lang" onclick="toggleDropdown()">
+            <div class="selected-lang" onclick="toggleDropdown(true)">
               <img src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" />
               <span id="selected-text">ko</span>
               <i class="ri-arrow-down-s-line"></i>
             </div>
-            <div class="dropdown" id="dropdown">
+            <div class="m-dropdown" id="m-dropdown">
               <div
                 class="en"
                 onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png')"
@@ -525,23 +525,6 @@
     <script src="https://ethicstem.kr/files/cache/assets/minified/layouts.ethicstem.page.min.js?t=1732589713"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.15/i18next.min.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const lang = window.localStorage.getItem("lang");
-
-        console.log(lang);
-
-        if (!lang) return;
-
-        // 모든 a 태그를 순회하면서 href 값 수정
-        document.querySelectorAll("main > a").forEach((anchor) => {
-          let href = anchor.getAttribute("href");
-
-          anchor.setAttribute("href", `${href}.${lang}`);
-        });
-      });
-    </script>
 
     <script>
       function toggleDropdown(m = false) {
